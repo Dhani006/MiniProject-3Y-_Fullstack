@@ -6,24 +6,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>GLA Hotel</title>
+    <title>Rooms | GLA Hotel</title>
+
 
     <!-- Bootstrap CSS -->
+
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
     >
 
+
     <!-- Bootstrap Icons -->
+
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     >
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+
+    <!-- Rooms CSS -->
+
+    <link
+        rel="stylesheet"
+        href="rooms.css"
+    >
 
 </head>
+
 
 <body>
 
@@ -34,8 +44,17 @@
 
         <div class="container">
 
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/logo.png" alt="GLA Hotel">
+
+            <a
+                class="navbar-brand"
+                href="index.html"
+            >
+
+                <img
+                    src="assets/logo.png"
+                    alt="GLA Hotel"
+                >
+
             </a>
 
 
@@ -45,18 +64,25 @@
                 data-bs-toggle="collapse"
                 data-bs-target="#hotelNav"
             >
+
                 <span class="navbar-toggler-icon"></span>
+
             </button>
 
 
-            <div class="collapse navbar-collapse" id="hotelNav">
+            <div
+                class="collapse navbar-collapse"
+                id="hotelNav"
+            >
+
 
                 <ul class="navbar-nav mx-auto">
+
 
                     <li class="nav-item">
 
                         <a
-                            class="nav-link active"
+                            class="nav-link"
                             href="index.html"
                         >
                             Home
@@ -68,7 +94,7 @@
                     <li class="nav-item">
 
                         <a
-                            class="nav-link"
+                            class="nav-link active"
                             href="rooms.html"
                         >
                             Rooms
@@ -112,16 +138,20 @@
 
                     </li>
 
+
                 </ul>
 
 
                 <div class="navbar-buttons">
 
+
                     <button
                         class="search-icon"
-                        onclick="openSearch()"
+                        onclick="focusRoomSearch()"
                     >
+
                         <i class="bi bi-search"></i>
+
                     </button>
 
 
@@ -134,7 +164,9 @@
                         Sign Up
                     </button>
 
+
                 </div>
+
 
             </div>
 
@@ -143,124 +175,60 @@
     </nav>
 
 
-    <!-- ================= SEARCH POPUP ================= -->
+    <!-- ================= PAGE HEADER ================= -->
 
-    <div
-        class="search-overlay"
-        id="searchOverlay"
-    >
+    <section class="page-header">
 
-        <div class="search-popup">
+        <div class="container">
 
-            <button
-                class="search-close"
-                onclick="closeSearch()"
-            >
-                <i class="bi bi-x-lg"></i>
-            </button>
+            <p class="section-label">
+                OUR ROOMS
+            </p>
 
 
-            <h3>
-                Search GLA Hotel
-            </h3>
+            <h1>
+                Find Your Perfect Stay
+            </h1>
 
 
-            <div class="search-input-box">
+            <p>
 
-                <input
-                    type="text"
-                    id="siteSearch"
-                    placeholder="Search rooms, offers..."
-                >
+                Explore our collection of comfortable rooms and
+                luxurious suites designed for an unforgettable stay.
 
-
-                <button onclick="performSearch()">
-
-                    <i class="bi bi-search"></i>
-
-                </button>
-
-            </div>
-
-
-            <p id="searchMessage"></p>
+            </p>
 
         </div>
 
-    </div>
+    </section>
 
 
-    <!-- ================= HERO ================= -->
+    <!-- ================= FILTER ================= -->
 
-    <section class="hero">
+    <section class="room-search">
 
-        <div class="hero-overlay"></div>
-
-
-        <div class="container hero-content">
-
-            <div class="row">
-
-                <div class="col-lg-7">
-
-                    <p class="hero-small-text">
-                        A PLACE BEYOND ORDINARY
-                    </p>
+        <div class="container">
 
 
-                    <h1>
-
-                        Stay. Explore.<br>
-
-                        <span>
-                            Belong.
-                        </span>
-
-                    </h1>
+            <div class="search-box">
 
 
-                    <p class="hero-description">
+                <div class="search-field">
 
-                        Luxury rooms, stunning views and unforgettable
-                        experiences await you at GLA Hotel.
+                    <i class="bi bi-search"></i>
 
-                    </p>
-
-
-                    <a
-                        href="rooms.html"
-                        class="btn discover-btn"
-                    >
-
-                        Discover More
-
-                        <i class="bi bi-arrow-right"></i>
-
-                    </a>
-
-                </div>
-
-            </div>
-
-
-            <!-- ================= BOOKING BOX ================= -->
-
-            <div class="booking-box">
-
-
-                <div class="booking-item">
-
-                    <i class="bi bi-calendar3"></i>
 
                     <div>
 
                         <small>
-                            Check-in
+                            Search
                         </small>
 
+
                         <input
-                            type="date"
-                            id="checkIn"
+                            type="text"
+                            id="roomSearch"
+                            placeholder="Search rooms..."
                         >
 
                     </div>
@@ -268,29 +236,10 @@
                 </div>
 
 
-                <div class="booking-item">
-
-                    <i class="bi bi-calendar3"></i>
-
-                    <div>
-
-                        <small>
-                            Check-out
-                        </small>
-
-                        <input
-                            type="date"
-                            id="checkOut"
-                        >
-
-                    </div>
-
-                </div>
-
-
-                <div class="booking-item">
+                <div class="search-field">
 
                     <i class="bi bi-people"></i>
+
 
                     <div>
 
@@ -299,33 +248,55 @@
                         </small>
 
 
-                        <select id="guests">
+                        <select id="guestFilter">
 
-                            <option value="1">
-                                1 Guest
+                            <option value="all">
+                                Any Guests
                             </option>
 
-                            <option
-                                value="2"
-                                selected
-                            >
+                            <option value="2">
                                 2 Guests
-                            </option>
-
-                            <option value="3">
-                                3 Guests
                             </option>
 
                             <option value="4">
                                 4 Guests
                             </option>
 
-                            <option value="5">
-                                5 Guests
+                        </select>
+
+                    </div>
+
+                </div>
+
+
+                <div class="search-field">
+
+                    <i class="bi bi-wallet2"></i>
+
+
+                    <div>
+
+                        <small>
+                            Price
+                        </small>
+
+
+                        <select id="priceFilter">
+
+                            <option value="all">
+                                Any Price
                             </option>
 
-                            <option value="6">
-                                6 Guests
+                            <option value="5000">
+                                Under ₹5,000
+                            </option>
+
+                            <option value="8000">
+                                Under ₹8,000
+                            </option>
+
+                            <option value="12000">
+                                Under ₹12,000
                             </option>
 
                         </select>
@@ -336,8 +307,8 @@
 
 
                 <button
-                    class="search-rooms-btn"
-                    onclick="searchRooms()"
+                    class="filter-btn"
+                    onclick="filterRooms()"
                 >
 
                     Search Rooms
@@ -345,105 +316,6 @@
                     <i class="bi bi-arrow-right"></i>
 
                 </button>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= FEATURES ================= -->
-
-    <section class="features">
-
-        <div class="container">
-
-            <div class="row text-center">
-
-
-                <div class="col-md-3 feature-item">
-
-                    <div class="feature-icon">
-                        <i class="bi bi-tag"></i>
-                    </div>
-
-                    <div>
-
-                        <h6>
-                            Best Price
-                        </h6>
-
-                        <p>
-                            Guarantee
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-md-3 feature-item">
-
-                    <div class="feature-icon">
-                        <i class="bi bi-cup-hot"></i>
-                    </div>
-
-                    <div>
-
-                        <h6>
-                            Fine Dining
-                        </h6>
-
-                        <p>
-                            Experiences
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-md-3 feature-item">
-
-                    <div class="feature-icon">
-                        <i class="bi bi-flower1"></i>
-                    </div>
-
-                    <div>
-
-                        <h6>
-                            Wellness
-                        </h6>
-
-                        <p>
-                            & Spa
-                        </p>
-
-                    </div>
-
-                </div>
-
-
-                <div class="col-md-3 feature-item">
-
-                    <div class="feature-icon">
-                        <i class="bi bi-headset"></i>
-                    </div>
-
-                    <div>
-
-                        <h6>
-                            24/7
-                        </h6>
-
-                        <p>
-                            Support
-                        </p>
-
-                    </div>
-
-                </div>
 
 
             </div>
@@ -455,60 +327,53 @@
 
     <!-- ================= ROOMS ================= -->
 
-    <section
-        class="rooms-section"
-        id="rooms"
-    >
+    <section class="rooms-section">
 
         <div class="container">
 
 
-            <div class="section-heading">
+            <div class="rooms-heading">
+
 
                 <div>
 
                     <p class="section-label">
-                        OUR ROOMS
+                        STAY WITH US
                     </p>
 
 
                     <h2>
-                        Featured Rooms
+                        Our Rooms & Suites
                     </h2>
-
-
-                    <p>
-                        Comfort. Elegance. A stay you'll always remember.
-                    </p>
 
                 </div>
 
 
-                <a
-                    href="rooms.html"
-                    class="view-all"
-                >
+                <p id="roomCount">
+                    4 rooms available
+                </p>
 
-                    View All Rooms
-
-                    <i class="bi bi-arrow-right"></i>
-
-                </a>
 
             </div>
 
 
-            <div class="row g-4">
+            <div
+                class="row g-4"
+                id="roomsContainer"
+            >
 
 
                 <!-- DELUXE ROOM -->
 
-                <div class="col-lg-3 col-md-6">
+                <div
+                    class="col-lg-6 room-item"
+                    data-name="Deluxe Room"
+                    data-guests="2"
+                    data-price="4500"
+                >
 
-                    <div
-                        class="room-card"
-                        onclick="showRoomDetails('Deluxe Room')"
-                    >
+                    <div class="room-card">
+
 
                         <div class="room-image">
 
@@ -527,12 +392,13 @@
 
                         <div class="room-content">
 
+
                             <h3>
                                 Deluxe Room
                             </h3>
 
 
-                            <p class="room-description">
+                            <p>
                                 A perfect blend of comfort and elegance.
                             </p>
 
@@ -559,6 +425,7 @@
 
                             <div class="room-bottom">
 
+
                                 <strong>
                                     ₹4,500
                                     <small>/ night</small>
@@ -566,11 +433,12 @@
 
 
                                 <button
-                                    class="book-btn"
-                                    onclick="event.stopPropagation(); showRoomDetails('Deluxe Room')"
+                                    class="details-btn"
+                                    onclick="showRoomDetails('Deluxe Room')"
                                 >
-                                    Book Now
+                                    View Details
                                 </button>
+
 
                             </div>
 
@@ -583,12 +451,15 @@
 
                 <!-- EXECUTIVE SUITE -->
 
-                <div class="col-lg-3 col-md-6">
+                <div
+                    class="col-lg-6 room-item"
+                    data-name="Executive Suite"
+                    data-guests="4"
+                    data-price="8200"
+                >
 
-                    <div
-                        class="room-card"
-                        onclick="showRoomDetails('Executive Suite')"
-                    >
+                    <div class="room-card">
+
 
                         <div class="room-image">
 
@@ -602,12 +473,13 @@
 
                         <div class="room-content">
 
+
                             <h3>
                                 Executive Suite
                             </h3>
 
 
-                            <p class="room-description">
+                            <p>
                                 More space for a memorable stay.
                             </p>
 
@@ -634,6 +506,7 @@
 
                             <div class="room-bottom">
 
+
                                 <strong>
                                     ₹8,200
                                     <small>/ night</small>
@@ -641,11 +514,12 @@
 
 
                                 <button
-                                    class="book-btn"
-                                    onclick="event.stopPropagation(); showRoomDetails('Executive Suite')"
+                                    class="details-btn"
+                                    onclick="showRoomDetails('Executive Suite')"
                                 >
-                                    Book Now
+                                    View Details
                                 </button>
+
 
                             </div>
 
@@ -658,12 +532,15 @@
 
                 <!-- SEA VIEW -->
 
-                <div class="col-lg-3 col-md-6">
+                <div
+                    class="col-lg-6 room-item"
+                    data-name="Premium Sea View"
+                    data-guests="2"
+                    data-price="6800"
+                >
 
-                    <div
-                        class="room-card"
-                        onclick="showRoomDetails('Premium Sea View')"
-                    >
+                    <div class="room-card">
+
 
                         <div class="room-image">
 
@@ -682,12 +559,13 @@
 
                         <div class="room-content">
 
+
                             <h3>
                                 Premium Sea View
                             </h3>
 
 
-                            <p class="room-description">
+                            <p>
                                 Wake up to breathtaking views.
                             </p>
 
@@ -714,6 +592,7 @@
 
                             <div class="room-bottom">
 
+
                                 <strong>
                                     ₹6,800
                                     <small>/ night</small>
@@ -721,11 +600,12 @@
 
 
                                 <button
-                                    class="book-btn"
-                                    onclick="event.stopPropagation(); showRoomDetails('Premium Sea View')"
+                                    class="details-btn"
+                                    onclick="showRoomDetails('Premium Sea View')"
                                 >
-                                    Book Now
+                                    View Details
                                 </button>
+
 
                             </div>
 
@@ -738,12 +618,15 @@
 
                 <!-- PRIVATE VILLA -->
 
-                <div class="col-lg-3 col-md-6">
+                <div
+                    class="col-lg-6 room-item"
+                    data-name="Private Pool Villa"
+                    data-guests="4"
+                    data-price="12000"
+                >
 
-                    <div
-                        class="room-card"
-                        onclick="showRoomDetails('Private Pool Villa')"
-                    >
+                    <div class="room-card">
+
 
                         <div class="room-image">
 
@@ -762,12 +645,13 @@
 
                         <div class="room-content">
 
+
                             <h3>
                                 Private Pool Villa
                             </h3>
 
 
-                            <p class="room-description">
+                            <p>
                                 Your own private escape.
                             </p>
 
@@ -794,6 +678,7 @@
 
                             <div class="room-bottom">
 
+
                                 <strong>
                                     ₹12,000
                                     <small>/ night</small>
@@ -801,11 +686,12 @@
 
 
                                 <button
-                                    class="book-btn"
-                                    onclick="event.stopPropagation(); showRoomDetails('Private Pool Villa')"
+                                    class="details-btn"
+                                    onclick="showRoomDetails('Private Pool Villa')"
                                 >
-                                    Book Now
+                                    View Details
                                 </button>
+
 
                             </div>
 
@@ -818,12 +704,34 @@
 
             </div>
 
+
+            <!-- NO RESULTS -->
+
+            <div
+                id="noResults"
+                class="no-results"
+            >
+
+                <i class="bi bi-search"></i>
+
+
+                <h3>
+                    No rooms found
+                </h3>
+
+
+                <p>
+                    Try changing your search or filters.
+                </p>
+
+            </div>
+
         </div>
 
     </section>
 
 
-    <!-- ================= ROOM MODAL ================= -->
+    <!-- ================= ROOM DETAILS MODAL ================= -->
 
     <div
         class="modal fade"
@@ -833,7 +741,9 @@
 
         <div class="modal-dialog modal-lg modal-dialog-centered">
 
+
             <div class="modal-content">
+
 
                 <div class="modal-header">
 
@@ -856,10 +766,10 @@
 
                 <div class="modal-body">
 
+
                     <img
                         id="modalRoomImage"
                         src=""
-                        class="img-fluid rounded mb-4"
                         alt="Room"
                     >
 
@@ -877,8 +787,11 @@
                         <span id="modalBed"></span>
 
                         <span>
+
                             <i class="bi bi-wifi"></i>
+
                             WiFi
+
                         </span>
 
                     </div>
@@ -886,10 +799,12 @@
 
                     <h4 id="modalPrice"></h4>
 
+
                 </div>
 
 
                 <div class="modal-footer">
+
 
                     <button
                         class="btn btn-secondary"
@@ -900,11 +815,12 @@
 
 
                     <button
-                        class="book-btn"
+                        class="details-book-btn"
                         onclick="goToBooking()"
                     >
                         Book Now
                     </button>
+
 
                 </div>
 
@@ -921,7 +837,9 @@
 
         <div class="container">
 
+
             <div class="row align-items-center">
+
 
                 <div class="col-md-6">
 
@@ -940,6 +858,7 @@
 
                 </div>
 
+
             </div>
 
         </div>
@@ -954,10 +873,11 @@
     </script>
 
 
-    <!-- Custom JS -->
+    <!-- Rooms JS -->
 
-    <script src="script.js"></script>
+    <script src="rooms.js"></script>
 
 </body>
 
 </html>
+
