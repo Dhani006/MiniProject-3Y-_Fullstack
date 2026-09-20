@@ -4,7 +4,7 @@ const rooms = {
 
     "Deluxe Room": {
 
-        image: "assets/room-deluxe.jpg",
+        image: "assets/room-deluxe.webp",
 
         description:
             "A perfect blend of comfort and elegance. Enjoy a relaxing stay with modern facilities and a comfortable king-size bed.",
@@ -20,7 +20,7 @@ const rooms = {
 
     "Executive Suite": {
 
-        image: "assets/room-suite.jpg",
+        image: "assets/room-suite.webp",
 
         description:
             "More space for a memorable stay. The Executive Suite provides extra comfort and a spacious environment for guests.",
@@ -36,7 +36,7 @@ const rooms = {
 
     "Premium Sea View": {
 
-        image: "assets/room-seaview.jpg",
+        image: "assets/room-seaview.webp",
 
         description:
             "Wake up to breathtaking views. Enjoy a comfortable room with beautiful surroundings and premium facilities.",
@@ -52,7 +52,7 @@ const rooms = {
 
     "Private Pool Villa": {
 
-        image: "assets/room-villa.jpg",
+        image: "assets/room-villa.webp",
 
         description:
             "Your own private escape. Enjoy additional privacy, spacious accommodation and a luxurious stay.",
