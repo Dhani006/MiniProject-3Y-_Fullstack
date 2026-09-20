@@ -1,0 +1,500 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f4ed;
+    color: #171717;
+    overflow-x: hidden;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.hotel-navbar {
+    background: #102a22;
+    padding: 15px 0;
+}
+
+
+.navbar-brand img {
+    width: 150px;
+    height: auto;
+}
+
+
+.nav-link {
+    color: white !important;
+    margin: 0 12px;
+    font-size: 15px;
+}
+
+
+.nav-link:hover {
+    color: #d6b56c !important;
+}
+
+
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.search-icon {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+.login-btn {
+    color: white;
+    border: 1px solid rgba(255,255,255,0.7);
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+
+.login-btn:hover {
+    background: white;
+    color: #102a22;
+}
+
+
+.signup-btn {
+    background: #d6b56c;
+    color: #111;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+
+.signup-btn:hover {
+    background: #c29e52;
+}
+
+
+/* ================= PAGE HEADER ================= */
+
+.page-header {
+    background: #102a22;
+    color: white;
+    text-align: center;
+    padding: 70px 0 100px;
+}
+
+
+.section-label {
+    color: #d6b56c;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+
+.page-header h1 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+
+.page-header p:last-child {
+    color: #ccc;
+    max-width: 600px;
+    margin: auto;
+}
+
+
+/* ================= SUMMARY ================= */
+
+.search-summary {
+    margin-top: -45px;
+    position: relative;
+    z-index: 5;
+}
+
+
+.summary-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.12);
+
+    display: grid;
+    grid-template-columns:
+        1.4fr
+        1fr
+        1fr
+        0.8fr
+        0.8fr;
+
+    gap: 10px;
+}
+
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 15px;
+    border-right: 1px solid #ddd;
+}
+
+
+.summary-item:last-child {
+    border-right: none;
+}
+
+
+.summary-item > i {
+    color: #102a22;
+    font-size: 22px;
+}
+
+
+.summary-item small {
+    display: block;
+    color: #777;
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+
+.summary-item strong {
+    display: block;
+    color: #102a22;
+    font-size: 14px;
+}
+
+
+/* ================= AVAILABILITY ================= */
+
+.availability-section {
+    padding: 80px 0;
+}
+
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+
+.section-heading h2 {
+    font-family: Georgia, serif;
+    font-size: 40px;
+    color: #102a22;
+    margin-bottom: 10px;
+}
+
+
+.section-heading p:last-child {
+    color: #777;
+}
+
+
+/* ================= RATE CARD ================= */
+
+.rate-card {
+    position: relative;
+    background: white;
+    border-radius: 12px;
+    padding: 30px;
+    height: 100%;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+
+.rate-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+
+.rate-card.featured {
+    border: 2px solid #d6b56c;
+}
+
+
+.popular-badge {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+
+    background: #d6b56c;
+    color: #111;
+
+    padding: 6px 12px;
+    border-radius: 20px;
+
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+.rate-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    margin-bottom: 25px;
+}
+
+
+.rate-card-header i {
+    font-size: 28px;
+    color: #b18a3b;
+}
+
+
+.rate-label {
+    color: #b18a3b;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+
+.rate-card h3 {
+    font-family: Georgia, serif;
+    color: #102a22;
+    font-size: 24px;
+}
+
+
+.rate-price {
+    color: #102a22;
+    font-size: 32px;
+    font-weight: 700;
+
+    margin-bottom: 25px;
+}
+
+
+.rate-price small {
+    color: #777;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+
+.rate-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 25px;
+}
+
+
+.rate-features li {
+    padding: 9px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+
+.rate-features i {
+    color: #102a22;
+    margin-right: 8px;
+}
+
+
+.rate-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+
+    margin-bottom: 20px;
+}
+
+
+.rate-total span {
+    color: #777;
+    font-size: 13px;
+}
+
+
+.rate-total strong {
+    color: #102a22;
+    font-size: 20px;
+}
+
+
+.select-rate-btn {
+    width: 100%;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #102a22;
+    color: white;
+
+    padding: 14px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+.select-rate-btn:hover {
+    background: #d6b56c;
+    color: #111;
+}
+
+
+.select-rate-btn i {
+    margin-left: 8px;
+}
+
+
+/* ================= BACK ================= */
+
+.back-section {
+    margin-top: 40px;
+}
+
+
+.back-btn {
+    border: none;
+    background: transparent;
+    color: #102a22;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.back-btn:hover {
+    color: #b18a3b;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #102a22;
+    color: white;
+    padding: 30px 0;
+}
+
+
+.footer p {
+    margin: 0;
+    color: #ccc;
+    font-size: 13px;
+}
+
+
+.footer-quote {
+    color: #d6b56c !important;
+    font-family: Georgia, serif;
+    font-size: 18px !important;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 991px) {
+
+    .navbar-buttons {
+        margin-top: 20px;
+        justify-content: center;
+    }
+
+
+    .summary-card {
+        grid-template-columns: 1fr 1fr;
+    }
+
+
+    .summary-item {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .page-header {
+        padding: 55px 20px 80px;
+    }
+
+
+    .page-header h1 {
+        font-size: 38px;
+    }
+
+
+    .availability-section {
+        padding: 60px 0;
+    }
+
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+
+    .summary-card {
+        grid-template-columns: 1fr;
+    }
+
+
+    .summary-item {
+        border-bottom: 1px solid #eee;
+    }
+
+
+    .summary-item:last-child {
+        border-bottom: none;
+    }
+
+
+    .rate-card {
+        padding: 25px;
+    }
+
+
+    .footer {
+        text-align: center;
+    }
+
+
+    .footer .text-md-end {
+        text-align: center !important;
+        margin-top: 10px;
+    }
+
+}

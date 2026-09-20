@@ -1,0 +1,672 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f4ed;
+    color: #171717;
+    overflow-x: hidden;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.hotel-navbar {
+    background: #102a22;
+    padding: 15px 0;
+}
+
+.navbar-brand img {
+    width: 150px;
+    height: auto;
+}
+
+.nav-link {
+    color: white !important;
+    margin: 0 12px;
+    font-size: 15px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #d6b56c !important;
+}
+
+.navbar-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.search-icon {
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 20px;
+}
+
+.login-btn {
+    color: white;
+    border: 1px solid rgba(255,255,255,0.7);
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background: white;
+    color: #102a22;
+}
+
+.signup-btn {
+    background: #d6b56c;
+    color: #111;
+    padding: 10px 22px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+.signup-btn:hover {
+    background: #c29e52;
+}
+
+
+/* ================= PAGE HEADER ================= */
+
+.page-header {
+    background: #102a22;
+    color: white;
+
+    text-align: center;
+
+    padding: 65px 0 95px;
+}
+
+.section-label {
+    color: #d6b56c;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.page-header h1 {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.page-header p:last-child {
+    color: #ccc;
+    max-width: 600px;
+    margin: auto;
+}
+
+
+/* ================= BOOKING ================= */
+
+.booking-section {
+    padding: 60px 0 80px;
+    margin-top: -45px;
+}
+
+.booking-card,
+.summary-card {
+    background: white;
+
+    border-radius: 12px;
+
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+
+/* ================= BOOKING CARD ================= */
+
+.booking-card {
+    padding: 30px;
+}
+
+.booking-card-header {
+    margin-bottom: 25px;
+}
+
+.booking-card-header h2 {
+    font-family: Georgia, serif;
+    font-size: 32px;
+    color: #102a22;
+}
+
+
+/* ================= ROOM ================= */
+
+.selected-room {
+    display: flex;
+
+    gap: 20px;
+
+    padding-bottom: 30px;
+
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.room-image {
+    width: 250px;
+    height: 180px;
+
+    flex-shrink: 0;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+}
+
+.room-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.room-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.room-details h3 {
+    font-family: Georgia, serif;
+    color: #102a22;
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+.room-details p {
+    color: #777;
+
+    font-size: 14px;
+    line-height: 1.5;
+
+    margin-bottom: 15px;
+}
+
+.room-info {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 15px;
+
+    color: #555;
+
+    font-size: 13px;
+
+    margin-bottom: 15px;
+}
+
+.room-info span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.room-info i {
+    color: #102a22;
+}
+
+.room-price {
+    color: #b18a3b;
+
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.room-price small {
+    color: #777;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+
+/* ================= FORM ================= */
+
+.form-section {
+    padding-top: 30px;
+}
+
+.form-section h3 {
+    font-family: Georgia, serif;
+    font-size: 22px;
+
+    color: #102a22;
+
+    margin-bottom: 18px;
+}
+
+.form-section label {
+    display: block;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    color: #444;
+
+    margin-bottom: 7px;
+}
+
+.input-wrapper {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 6px;
+
+    padding: 12px 14px;
+
+    background: white;
+}
+
+.input-wrapper:focus-within {
+    border-color: #b18a3b;
+}
+
+.input-wrapper i {
+    color: #102a22;
+    flex-shrink: 0;
+}
+
+.input-wrapper input,
+.input-wrapper select {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background: transparent;
+
+    font-size: 14px;
+}
+
+
+/* ================= ERROR ================= */
+
+.booking-error {
+    display: none;
+
+    background: #fce8e8;
+
+    color: #a33;
+
+    border-radius: 6px;
+
+    padding: 12px 15px;
+
+    margin-top: 25px;
+
+    font-size: 13px;
+}
+
+
+/* ================= CONTINUE ================= */
+
+.continue-btn {
+    width: 100%;
+
+    border: none;
+
+    background: #102a22;
+    color: white;
+
+    padding: 15px;
+
+    border-radius: 7px;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    margin-top: 25px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.continue-btn:hover {
+    background: #d6b56c;
+    color: #111;
+}
+
+.continue-btn i {
+    margin-left: 8px;
+}
+
+
+/* ================= SUMMARY ================= */
+
+.summary-card {
+    padding: 30px;
+
+    position: sticky;
+    top: 25px;
+}
+
+.summary-header {
+    margin-bottom: 25px;
+}
+
+.summary-header h2 {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    color: #102a22;
+}
+
+.summary-row {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 14px;
+}
+
+.summary-row span {
+    color: #777;
+}
+
+.summary-row strong {
+    color: #222;
+
+    text-align: right;
+
+    word-break: break-word;
+}
+
+.total-row {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    padding-top: 20px;
+
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.total-row strong {
+    color: #b18a3b;
+
+    font-size: 23px;
+}
+
+.booking-note {
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    padding: 15px;
+
+    background: #f7f4ed;
+
+    border-radius: 7px;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+.booking-note i {
+    color: #b18a3b;
+
+    font-size: 17px;
+
+    flex-shrink: 0;
+}
+
+.booking-note p {
+    margin: 0;
+
+    line-height: 1.5;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer {
+    background: #102a22;
+
+    color: white;
+
+    padding: 30px 0;
+}
+
+.footer p {
+    margin: 0;
+
+    color: #ccc;
+
+    font-size: 13px;
+}
+
+.footer-quote {
+    color: #d6b56c !important;
+
+    font-family: Georgia, serif;
+
+    font-size: 20px !important;
+
+    font-style: italic;
+}
+
+
+/* ================================================= */
+/* ================= TABLET ======================== */
+/* ================================================= */
+
+@media (max-width: 991px) {
+
+    .navbar-buttons {
+        margin-top: 15px;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .nav-link {
+        margin: 5px 0;
+    }
+
+    .page-header {
+        padding: 55px 0 85px;
+    }
+
+    .page-header h1 {
+        font-size: 43px;
+    }
+
+    .booking-section {
+        padding-top: 50px;
+    }
+
+    .summary-card {
+        position: static;
+    }
+
+}
+
+
+/* ================================================= */
+/* ================= MOBILE ======================== */
+/* ================================================= */
+
+@media (max-width: 767px) {
+
+    .navbar-brand img {
+        width: 130px;
+    }
+
+    .navbar-buttons {
+        width: 100%;
+    }
+
+    .page-header {
+        padding: 50px 15px 75px;
+    }
+
+    .page-header h1 {
+        font-size: 36px;
+    }
+
+    .page-header p:last-child {
+        font-size: 14px;
+    }
+
+    .booking-section {
+        padding: 45px 0 60px;
+    }
+
+    .booking-card,
+    .summary-card {
+        padding: 20px;
+    }
+
+    .booking-card-header h2 {
+        font-size: 28px;
+    }
+
+
+    /* ROOM */
+
+    .selected-room {
+        flex-direction: column;
+    }
+
+    .room-image {
+        width: 100%;
+        height: 230px;
+    }
+
+    .room-details h3 {
+        font-size: 23px;
+    }
+
+
+    /* FORM */
+
+    .form-section {
+        padding-top: 25px;
+    }
+
+    .form-section h3 {
+        font-size: 20px;
+    }
+
+
+    /* SUMMARY */
+
+    .summary-header h2 {
+        font-size: 27px;
+    }
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer .text-md-end {
+        text-align: center !important;
+        margin-top: 12px;
+    }
+
+}
+
+
+/* ================================================= */
+/* ================= SMALL MOBILE ================= */
+/* ================================================= */
+
+@media (max-width: 576px) {
+
+    .navbar-brand img {
+        width: 120px;
+    }
+
+    .page-header h1 {
+        font-size: 31px;
+    }
+
+    .section-label {
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    .booking-card,
+    .summary-card {
+        padding: 17px;
+    }
+
+    .room-image {
+        height: 210px;
+    }
+
+    .room-info {
+        gap: 10px;
+    }
+
+    .summary-row {
+        font-size: 13px;
+    }
+
+    .total-row {
+        font-size: 15px;
+    }
+
+    .total-row strong {
+        font-size: 20px;
+    }
+
+}
+
+
+/* ================================================= */
+/* ================= VERY SMALL ==================== */
+/* ================================================= */
+
+@media (max-width: 380px) {
+
+    .page-header h1 {
+        font-size: 28px;
+    }
+
+    .booking-card-header h2 {
+        font-size: 25px;
+    }
+
+    .room-details h3 {
+        font-size: 21px;
+    }
+
+    .summary-header h2 {
+        font-size: 24px;
+    }
+
+}

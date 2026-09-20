@@ -32,22 +32,13 @@ function searchRooms() {
     }
 
 
-    /*
-        For now this sends the user to
-        the Rooms page.
-
-        Later we will pass:
-        dates + guests
-        to the booking flow.
-    */
-
     window.location.href =
         "rooms.html?checkIn=" +
-        checkIn +
+        encodeURIComponent(checkIn) +
         "&checkOut=" +
-        checkOut +
+        encodeURIComponent(checkOut) +
         "&guests=" +
-        guests;
+        encodeURIComponent(guests);
 }
 
 
@@ -106,10 +97,6 @@ function performSearch() {
     }
 
 
-    /*
-        Send the search to the Rooms page.
-    */
-
     window.location.href =
         "rooms.html?search=" +
         encodeURIComponent(searchText);
@@ -122,7 +109,7 @@ const roomData = {
 
     "Deluxe Room": {
 
-        image: "assets/room-deluxe.jpg",
+        image: "assets/room-deluxe.webp",
 
         description:
             "A perfect blend of comfort and elegance. Enjoy a relaxing stay with modern facilities and a comfortable king-size bed.",
@@ -138,7 +125,7 @@ const roomData = {
 
     "Executive Suite": {
 
-        image: "assets/room-suite.jpg",
+        image: "assets/room-suite.webp",
 
         description:
             "More space for a memorable stay. The Executive Suite provides extra comfort and a spacious environment for guests.",
@@ -154,7 +141,7 @@ const roomData = {
 
     "Premium Sea View": {
 
-        image: "assets/room-seaview.jpg",
+        image: "assets/room-seaview.webp",
 
         description:
             "Wake up to breathtaking views. Enjoy a comfortable room with beautiful surroundings and premium facilities.",
@@ -170,7 +157,7 @@ const roomData = {
 
     "Private Pool Villa": {
 
-        image: "assets/room-villa.jpg",
+        image: "assets/room-villa.webp",
 
         description:
             "Your own private escape. Enjoy additional privacy, spacious accommodation and a luxurious stay.",
@@ -251,7 +238,9 @@ function showRoomDetails(roomName) {
 
 
     const modal =
-        new bootstrap.Modal(modalElement);
+        bootstrap.Modal.getOrCreateInstance(
+            modalElement
+        );
 
 
     modal.show();
@@ -264,22 +253,266 @@ function showRoomDetails(roomName) {
 function goToBooking() {
 
     if (!selectedRoom) {
-
         return;
-
     }
 
-
-    /*
-        The booking page doesn't exist yet.
-
-        Once we create booking.html,
-        this will carry the selected room.
-    */
 
     window.location.href =
         "booking.html?room=" +
         encodeURIComponent(selectedRoom);
+
+}
+
+
+/* =========================================================
+   LOGIN / SIGNUP
+========================================================= */
+
+
+/* OPEN AUTH MODAL */
+
+function openAuthModal(type) {
+
+    const modalElement =
+        document.getElementById("authModal");
+
+
+    const modal =
+        bootstrap.Modal.getOrCreateInstance(
+            modalElement
+        );
+
+
+    switchAuth(type);
+
+
+    modal.show();
+}
+
+
+/* SWITCH LOGIN / SIGNUP */
+
+function switchAuth(type) {
+
+    const loginForm =
+        document.getElementById("loginForm");
+
+    const signupForm =
+        document.getElementById("signupForm");
+
+    const loginTab =
+        document.getElementById("loginTab");
+
+    const signupTab =
+        document.getElementById("signupTab");
+
+    const title =
+        document.getElementById("authTitle");
+
+    const subtitle =
+        document.getElementById("authSubtitle");
+
+
+    if (type === "login") {
+
+        loginForm.style.display =
+            "block";
+
+        signupForm.style.display =
+            "none";
+
+
+        loginTab.classList.add("active");
+
+        signupTab.classList.remove("active");
+
+
+        title.textContent =
+            "Welcome Back";
+
+
+        subtitle.textContent =
+            "Login to manage your reservations.";
+
+    }
+
+    else {
+
+        loginForm.style.display =
+            "none";
+
+        signupForm.style.display =
+            "block";
+
+
+        loginTab.classList.remove("active");
+
+        signupTab.classList.add("active");
+
+
+        title.textContent =
+            "Create Account";
+
+
+        subtitle.textContent =
+            "Join GLA Hotel for a better experience.";
+
+    }
+
+}
+
+
+/* PASSWORD VISIBILITY */
+
+function togglePassword(
+    inputId,
+    button
+) {
+
+    const input =
+        document.getElementById(inputId);
+
+
+    const icon =
+        button.querySelector("i");
+
+
+    if (input.type === "password") {
+
+        input.type = "text";
+
+
+        icon.classList.remove(
+            "bi-eye"
+        );
+
+
+        icon.classList.add(
+            "bi-eye-slash"
+        );
+
+    }
+
+    else {
+
+        input.type = "password";
+
+
+        icon.classList.remove(
+            "bi-eye-slash"
+        );
+
+
+        icon.classList.add(
+            "bi-eye"
+        );
+
+    }
+
+}
+
+
+/* LOGIN FORM */
+
+const loginForm =
+    document.getElementById("loginForm");
+
+
+if (loginForm) {
+
+    loginForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            alert(
+                "Login functionality will be connected to the backend."
+            );
+
+        }
+    );
+
+}
+
+
+/* SIGNUP FORM */
+
+const signupForm =
+    document.getElementById("signupForm");
+
+
+if (signupForm) {
+
+    signupForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            const password =
+                document.getElementById(
+                    "signupPassword"
+                ).value;
+
+
+            const confirmPassword =
+                document.getElementById(
+                    "confirmPassword"
+                ).value;
+
+
+            if (
+                password !==
+                confirmPassword
+            ) {
+
+                alert(
+                    "Passwords do not match."
+                );
+
+                return;
+            }
+
+
+            alert(
+                "Account creation will be connected to the backend."
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   CONTACT FORM
+========================================================= */
+
+const contactForm =
+    document.getElementById("contactForm");
+
+
+if (contactForm) {
+
+    contactForm.addEventListener(
+        "submit",
+        function(event) {
+
+            event.preventDefault();
+
+
+            alert(
+                "Thank you! Your message has been received."
+            );
+
+
+            contactForm.reset();
+
+        }
+    );
 
 }
 
@@ -298,4 +531,3 @@ document.addEventListener(
 
     }
 );
-

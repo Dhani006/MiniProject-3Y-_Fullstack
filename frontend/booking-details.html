@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Booking Details | GLA Hotel</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="booking-details.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg hotel-navbar">
+    <div class="container">
+
+        <a class="navbar-brand" href="index.html">
+            <span>GLA</span> HOTEL
+        </a>
+
+        <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav mx-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#rooms">Rooms</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#offers">Offers</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html#contact">Contact</a>
+                </li>
+
+            </ul>
+
+            <div class="navbar-buttons">
+                <a href="#" class="login-btn">Login</a>
+                <a href="#" class="signup-btn">Sign Up</a>
+            </div>
+
+        </div>
+    </div>
+</nav>
+
+
+<!-- PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <div class="header-content">
+            <span>GLA HOTEL</span>
+            <h1>Booking Details</h1>
+            <p>Enter your details to complete your reservation.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- PROGRESS -->
+<section class="booking-progress">
+    <div class="container">
+
+        <div class="progress-wrapper">
+
+            <div class="progress-step completed">
+                <div class="step-circle">
+                    <i class="bi bi-check"></i>
+                </div>
+                <span>Booking</span>
+            </div>
+
+            <div class="progress-line completed-line"></div>
+
+            <div class="progress-step completed">
+                <div class="step-circle">
+                    <i class="bi bi-check"></i>
+                </div>
+                <span>Availability</span>
+            </div>
+
+            <div class="progress-line completed-line"></div>
+
+            <div class="progress-step active">
+                <div class="step-circle">3</div>
+                <span>Details</span>
+            </div>
+
+            <div class="progress-line"></div>
+
+            <div class="progress-step">
+                <div class="step-circle">4</div>
+                <span>Confirmation</span>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- MAIN CONTENT -->
+<section class="details-section">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- CUSTOMER DETAILS -->
+            <div class="col-lg-7">
+
+                <div class="details-card">
+
+                    <div class="card-heading">
+                        <span>01</span>
+                        <div>
+                            <h2>Guest Information</h2>
+                            <p>Please enter your personal details.</p>
+                        </div>
+                    </div>
+
+                    <form id="bookingForm">
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+                                <label for="firstName">First Name *</label>
+                                <input
+                                    type="text"
+                                    id="firstName"
+                                    class="form-control"
+                                    placeholder="Enter first name"
+                                    required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="lastName">Last Name *</label>
+                                <input
+                                    type="text"
+                                    id="lastName"
+                                    class="form-control"
+                                    placeholder="Enter last name"
+                                    required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="email">Email Address *</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="form-control"
+                                    placeholder="Enter email address"
+                                    required>
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="phone">Phone Number *</label>
+                                <input
+                                    type="tel"
+                                    id="phone"
+                                    class="form-control"
+                                    placeholder="Enter phone number"
+                                    required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="address">Address</label>
+                                <input
+                                    type="text"
+                                    id="address"
+                                    class="form-control"
+                                    placeholder="Enter your address">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="city">City</label>
+                                <input
+                                    type="text"
+                                    id="city"
+                                    class="form-control"
+                                    placeholder="Enter city">
+                            </div>
+
+                            <div class="col-md-6">
+                                <label for="country">Country</label>
+                                <input
+                                    type="text"
+                                    id="country"
+                                    class="form-control"
+                                    placeholder="Enter country">
+                            </div>
+
+                        </div>
+
+
+                        <!-- SPECIAL REQUEST -->
+                        <div class="special-request">
+
+                            <div class="card-heading">
+                                <span>02</span>
+                                <div>
+                                    <h2>Special Requests</h2>
+                                    <p>Let us know if you need anything special.</p>
+                                </div>
+                            </div>
+
+                            <textarea
+                                id="specialRequest"
+                                class="form-control"
+                                rows="4"
+                                placeholder="Example: Extra bed, late check-in, room preference..."></textarea>
+
+                        </div>
+
+
+                        <!-- TERMS -->
+                        <div class="terms-box">
+
+                            <label class="checkbox-label">
+
+                                <input type="checkbox" id="terms" required>
+
+                                <span>
+                                    I agree to the
+                                    <a href="#">Terms & Conditions</a>
+                                    and
+                                    <a href="#">Privacy Policy</a>.
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <button type="submit" class="continue-btn">
+                            Continue to Confirmation
+                            <i class="bi bi-arrow-right"></i>
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOOKING SUMMARY -->
+            <div class="col-lg-5">
+
+                <div class="summary-card">
+
+                    <div class="summary-title">
+                        <span>Your Reservation</span>
+                        <i class="bi bi-building"></i>
+                    </div>
+
+
+                    <div class="room-summary">
+
+                        <div class="room-image">
+                            <i class="bi bi-door-open"></i>
+                        </div>
+
+                        <div>
+                            <h3 id="summaryRoom">Room</h3>
+                            <p id="summaryRate">Selected Rate</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="summary-details">
+
+                        <div class="summary-item">
+                            <div>
+                                <small>Check-in</small>
+                                <strong id="summaryCheckIn">-</strong>
+                            </div>
+
+                            <i class="bi bi-calendar-check"></i>
+                        </div>
+
+
+                        <div class="summary-item">
+                            <div>
+                                <small>Check-out</small>
+                                <strong id="summaryCheckOut">-</strong>
+                            </div>
+
+                            <i class="bi bi-calendar-x"></i>
+                        </div>
+
+
+                        <div class="summary-item">
+                            <div>
+                                <small>Guests</small>
+                                <strong id="summaryGuests">-</strong>
+                            </div>
+
+                            <i class="bi bi-people"></i>
+                        </div>
+
+
+                        <div class="summary-item">
+                            <div>
+                                <small>Rooms</small>
+                                <strong id="summaryRooms">-</strong>
+                            </div>
+
+                            <i class="bi bi-door-open"></i>
+                        </div>
+
+
+                        <div class="summary-item">
+                            <div>
+                                <small>Number of Nights</small>
+                                <strong id="summaryNights">-</strong>
+                            </div>
+
+                            <i class="bi bi-moon-stars"></i>
+                        </div>
+
+                    </div>
+
+
+                    <div class="price-section">
+
+                        <div class="price-row">
+                            <span>Room Price / Night</span>
+                            <strong id="nightlyPrice">₹0</strong>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Number of Nights</span>
+                            <strong id="priceNights">0</strong>
+                        </div>
+
+                        <div class="price-row">
+                            <span>Number of Rooms</span>
+                            <strong id="priceRooms">0</strong>
+                        </div>
+
+                        <div class="price-divider"></div>
+
+                        <div class="total-row">
+                            <span>Total</span>
+                            <strong id="totalPrice">₹0</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- SECURITY -->
+                <div class="secure-box">
+
+                    <i class="bi bi-shield-check"></i>
+
+                    <div>
+                        <strong>Secure Booking</strong>
+                        <p>Your information is protected and secure.</p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div>
+                <h3>GLA HOTEL</h3>
+                <p>
+                    Experience comfort, luxury and unforgettable
+                    hospitality with us.
+                </p>
+            </div>
+
+            <div>
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="index.html#rooms">Rooms</a>
+                <a href="index.html#offers">Offers</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#contact">Contact</a>
+            </div>
+
+            <div>
+                <h4>Contact</h4>
+                <p><i class="bi bi-telephone"></i> +91 98765 43210</p>
+                <p><i class="bi bi-envelope"></i> info@glahotel.com</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 GLA Hotel. All Rights Reserved.</p>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="booking-details.js"></script>
+
+</body>
+</html>

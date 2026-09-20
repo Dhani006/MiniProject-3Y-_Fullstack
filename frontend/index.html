@@ -28,208 +28,984 @@
 <body>
 
 
-    <!-- ================= NAVBAR ================= -->
+<!-- ================= NAVBAR ================= -->
 
-    <nav class="navbar navbar-expand-lg navbar-dark hotel-navbar">
+<nav class="navbar navbar-expand-lg navbar-dark hotel-navbar">
 
-        <div class="container">
+    <div class="container">
 
-            <a class="navbar-brand" href="index.html">
-                <img src="assets/logo.png" alt="GLA Hotel">
-            </a>
+        <a class="navbar-brand" href="#home">
 
-
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#hotelNav"
+            <img
+                src="assets/logo.webp"
+                alt="GLA Hotel"
             >
-                <span class="navbar-toggler-icon"></span>
-            </button>
+
+        </a>
 
 
-            <div class="collapse navbar-collapse" id="hotelNav">
+        <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#hotelNav"
+        >
 
-                <ul class="navbar-nav mx-auto">
+            <span class="navbar-toggler-icon"></span>
 
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link active"
-                            href="index.html"
-                        >
-                            Home
-                        </a>
-
-                    </li>
+        </button>
 
 
-                    <li class="nav-item">
+        <div
+            class="collapse navbar-collapse"
+            id="hotelNav"
+        >
 
-                        <a
-                            class="nav-link"
-                            href="rooms.html"
-                        >
-                            Rooms
-                        </a>
+            <ul class="navbar-nav mx-auto">
 
-                    </li>
+                <li class="nav-item">
 
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="#"
-                        >
-                            Offers
-                        </a>
-
-                    </li>
-
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="#"
-                        >
-                            About
-                        </a>
-
-                    </li>
-
-
-                    <li class="nav-item">
-
-                        <a
-                            class="nav-link"
-                            href="#"
-                        >
-                            Contact
-                        </a>
-
-                    </li>
-
-                </ul>
-
-
-                <div class="navbar-buttons">
-
-                    <button
-                        class="search-icon"
-                        onclick="openSearch()"
+                    <a
+                        class="nav-link active"
+                        href="#home"
                     >
-                        <i class="bi bi-search"></i>
-                    </button>
+                        Home
+                    </a>
+
+                </li>
 
 
-                    <button class="btn login-btn">
-                        Login
-                    </button>
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#rooms"
+                    >
+                        Rooms
+                    </a>
+
+                </li>
 
 
-                    <button class="btn signup-btn">
-                        Sign Up
-                    </button>
+                <li class="nav-item">
 
-                </div>
+                    <a
+                        class="nav-link"
+                        href="#offers"
+                    >
+                        Offers
+                    </a>
 
-            </div>
-
-        </div>
-
-    </nav>
-
-
-    <!-- ================= SEARCH POPUP ================= -->
-
-    <div
-        class="search-overlay"
-        id="searchOverlay"
-    >
-
-        <div class="search-popup">
-
-            <button
-                class="search-close"
-                onclick="closeSearch()"
-            >
-                <i class="bi bi-x-lg"></i>
-            </button>
+                </li>
 
 
-            <h3>
-                Search GLA Hotel
-            </h3>
+                <li class="nav-item">
+
+                    <a
+                        class="nav-link"
+                        href="#about"
+                    >
+                        About
+                    </a>
+
+                </li>
 
 
-            <div class="search-input-box">
+                <li class="nav-item">
 
-                <input
-                    type="text"
-                    id="siteSearch"
-                    placeholder="Search rooms, offers..."
+                    <a
+                        class="nav-link"
+                        href="#contact"
+                    >
+                        Contact
+                    </a>
+
+                </li>
+
+            </ul>
+
+
+            <div class="navbar-buttons">
+
+                <button
+                    class="search-icon"
+                    onclick="openSearch()"
                 >
-
-
-                <button onclick="performSearch()">
-
                     <i class="bi bi-search"></i>
+                </button>
 
+
+                <button
+                    class="btn login-btn"
+                    onclick="openAuthModal('login')"
+                >
+                    Login
+                </button>
+
+
+                <button
+                    class="btn signup-btn"
+                    onclick="openAuthModal('signup')"
+                >
+                    Sign Up
                 </button>
 
             </div>
-
-
-            <p id="searchMessage"></p>
 
         </div>
 
     </div>
 
-
-    <!-- ================= HERO ================= -->
-
-    <section class="hero">
-
-        <div class="hero-overlay"></div>
+</nav>
 
 
-        <div class="container hero-content">
+<!-- ================= SEARCH POPUP ================= -->
 
-            <div class="row">
+<div
+    class="search-overlay"
+    id="searchOverlay"
+>
 
-                <div class="col-lg-7">
+    <div class="search-popup">
 
-                    <p class="hero-small-text">
-                        A PLACE BEYOND ORDINARY
+        <button
+            class="search-close"
+            onclick="closeSearch()"
+        >
+
+            <i class="bi bi-x-lg"></i>
+
+        </button>
+
+
+        <h3>
+            Search GLA Hotel
+        </h3>
+
+
+        <div class="search-input-box">
+
+            <input
+                type="text"
+                id="siteSearch"
+                placeholder="Search rooms, offers..."
+            >
+
+
+            <button onclick="performSearch()">
+
+                <i class="bi bi-search"></i>
+
+            </button>
+
+        </div>
+
+
+        <p id="searchMessage"></p>
+
+    </div>
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section
+    class="hero"
+    id="home"
+>
+
+    <div class="hero-overlay"></div>
+
+
+    <div class="container hero-content">
+
+        <div class="row">
+
+            <div class="col-lg-7">
+
+                <p class="hero-small-text">
+                    A PLACE BEYOND ORDINARY
+                </p>
+
+
+                <h1>
+
+                    Stay. Explore.<br>
+
+                    <span>
+                        Belong.
+                    </span>
+
+                </h1>
+
+
+                <p class="hero-description">
+
+                    Luxury rooms, stunning views and unforgettable
+                    experiences await you at GLA Hotel.
+
+                </p>
+
+
+                <a
+                    href="#rooms"
+                    class="btn discover-btn"
+                >
+
+                    Discover More
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- BOOKING BOX -->
+
+        <div class="booking-box">
+
+
+            <div class="booking-item">
+
+                <i class="bi bi-calendar3"></i>
+
+                <div>
+
+                    <small>
+                        Check-in
+                    </small>
+
+                    <input
+                        type="date"
+                        id="checkIn"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="booking-item">
+
+                <i class="bi bi-calendar3"></i>
+
+                <div>
+
+                    <small>
+                        Check-out
+                    </small>
+
+                    <input
+                        type="date"
+                        id="checkOut"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="booking-item">
+
+                <i class="bi bi-people"></i>
+
+                <div>
+
+                    <small>
+                        Guests
+                    </small>
+
+                    <select id="guests">
+
+                        <option value="1">
+                            1 Guest
+                        </option>
+
+                        <option
+                            value="2"
+                            selected
+                        >
+                            2 Guests
+                        </option>
+
+                        <option value="3">
+                            3 Guests
+                        </option>
+
+                        <option value="4">
+                            4 Guests
+                        </option>
+
+                        <option value="5">
+                            5 Guests
+                        </option>
+
+                        <option value="6">
+                            6 Guests
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button
+                class="search-rooms-btn"
+                onclick="searchRooms()"
+            >
+
+                Search Rooms
+
+                <i class="bi bi-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features">
+
+    <div class="container">
+
+        <div class="row text-center">
+
+
+            <div class="col-md-3 feature-item">
+
+                <div class="feature-icon">
+                    <i class="bi bi-tag"></i>
+                </div>
+
+                <div>
+
+                    <h6>
+                        Best Price
+                    </h6>
+
+                    <p>
+                        Guarantee
                     </p>
 
+                </div>
 
-                    <h1>
+            </div>
 
-                        Stay. Explore.<br>
 
-                        <span>
-                            Belong.
+            <div class="col-md-3 feature-item">
+
+                <div class="feature-icon">
+                    <i class="bi bi-cup-hot"></i>
+                </div>
+
+                <div>
+
+                    <h6>
+                        Fine Dining
+                    </h6>
+
+                    <p>
+                        Experiences
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3 feature-item">
+
+                <div class="feature-icon">
+                    <i class="bi bi-flower1"></i>
+                </div>
+
+                <div>
+
+                    <h6>
+                        Wellness
+                    </h6>
+
+                    <p>
+                        & Spa
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3 feature-item">
+
+                <div class="feature-icon">
+                    <i class="bi bi-headset"></i>
+                </div>
+
+                <div>
+
+                    <h6>
+                        24/7
+                    </h6>
+
+                    <p>
+                        Support
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ROOMS ================= -->
+
+<section
+    class="rooms-section"
+    id="rooms"
+>
+
+    <div class="container">
+
+
+        <div class="section-heading">
+
+            <div>
+
+                <p class="section-label">
+                    OUR ROOMS
+                </p>
+
+
+                <h2>
+                    Featured Rooms
+                </h2>
+
+
+                <p>
+                    Comfort. Elegance. A stay you'll always remember.
+                </p>
+
+            </div>
+
+
+            <a
+                href="rooms.html"
+                class="view-all"
+            >
+
+                View All Rooms
+
+                <i class="bi bi-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- DELUXE ROOM -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div
+                    class="room-card"
+                    onclick="showRoomDetails('Deluxe Room')"
+                >
+
+                    <div class="room-image">
+
+                        <img
+                            src="assets/room-deluxe.webp"
+                            alt="Deluxe Room"
+                        >
+
+
+                        <span class="room-badge">
+                            Popular
                         </span>
 
-                    </h1>
+                    </div>
 
 
-                    <p class="hero-description">
+                    <div class="room-content">
 
-                        Luxury rooms, stunning views and unforgettable
-                        experiences await you at GLA Hotel.
+                        <h3>
+                            Deluxe Room
+                        </h3>
 
+
+                        <p class="room-description">
+                            A perfect blend of comfort and elegance.
+                        </p>
+
+
+                        <div class="room-info">
+
+                            <span>
+                                <i class="bi bi-people"></i>
+                                2 Guests
+                            </span>
+
+                            <span>
+                                <i class="bi bi-bed"></i>
+                                1 King Bed
+                            </span>
+
+                            <span>
+                                <i class="bi bi-wifi"></i>
+                                WiFi
+                            </span>
+
+                        </div>
+
+
+                        <div class="room-bottom">
+
+                            <strong>
+                                ₹4,500
+                                <small>/ night</small>
+                            </strong>
+
+
+                            <button
+                                class="book-btn"
+                                onclick="event.stopPropagation(); showRoomDetails('Deluxe Room')"
+                            >
+                                Book Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- EXECUTIVE SUITE -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div
+                    class="room-card"
+                    onclick="showRoomDetails('Executive Suite')"
+                >
+
+                    <div class="room-image">
+
+                        <img
+                            src="assets/room-suite.webp"
+                            alt="Executive Suite"
+                        >
+
+                    </div>
+
+
+                    <div class="room-content">
+
+                        <h3>
+                            Executive Suite
+                        </h3>
+
+
+                        <p class="room-description">
+                            More space for a memorable stay.
+                        </p>
+
+
+                        <div class="room-info">
+
+                            <span>
+                                <i class="bi bi-people"></i>
+                                4 Guests
+                            </span>
+
+                            <span>
+                                <i class="bi bi-bed"></i>
+                                1 King Bed
+                            </span>
+
+                            <span>
+                                <i class="bi bi-wifi"></i>
+                                WiFi
+                            </span>
+
+                        </div>
+
+
+                        <div class="room-bottom">
+
+                            <strong>
+                                ₹8,200
+                                <small>/ night</small>
+                            </strong>
+
+
+                            <button
+                                class="book-btn"
+                                onclick="event.stopPropagation(); showRoomDetails('Executive Suite')"
+                            >
+                                Book Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- SEA VIEW -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div
+                    class="room-card"
+                    onclick="showRoomDetails('Premium Sea View')"
+                >
+
+                    <div class="room-image">
+
+                        <img
+                            src="assets/room-seaview.webp"
+                            alt="Premium Sea View"
+                        >
+
+
+                        <span class="room-badge">
+                            Sea View
+                        </span>
+
+                    </div>
+
+
+                    <div class="room-content">
+
+                        <h3>
+                            Premium Sea View
+                        </h3>
+
+
+                        <p class="room-description">
+                            Wake up to breathtaking views.
+                        </p>
+
+
+                        <div class="room-info">
+
+                            <span>
+                                <i class="bi bi-people"></i>
+                                2 Guests
+                            </span>
+
+                            <span>
+                                <i class="bi bi-bed"></i>
+                                1 King Bed
+                            </span>
+
+                            <span>
+                                <i class="bi bi-wifi"></i>
+                                WiFi
+                            </span>
+
+                        </div>
+
+
+                        <div class="room-bottom">
+
+                            <strong>
+                                ₹6,800
+                                <small>/ night</small>
+                            </strong>
+
+
+                            <button
+                                class="book-btn"
+                                onclick="event.stopPropagation(); showRoomDetails('Premium Sea View')"
+                            >
+                                Book Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRIVATE VILLA -->
+
+            <div class="col-lg-3 col-md-6">
+
+                <div
+                    class="room-card"
+                    onclick="showRoomDetails('Private Pool Villa')"
+                >
+
+                    <div class="room-image">
+
+                        <img
+                            src="assets/room-villa.webp"
+                            alt="Private Pool Villa"
+                        >
+
+
+                        <span class="room-badge">
+                            Luxury
+                        </span>
+
+                    </div>
+
+
+                    <div class="room-content">
+
+                        <h3>
+                            Private Pool Villa
+                        </h3>
+
+
+                        <p class="room-description">
+                            Your own private escape.
+                        </p>
+
+
+                        <div class="room-info">
+
+                            <span>
+                                <i class="bi bi-people"></i>
+                                4 Guests
+                            </span>
+
+                            <span>
+                                <i class="bi bi-bed"></i>
+                                2 Beds
+                            </span>
+
+                            <span>
+                                <i class="bi bi-wifi"></i>
+                                WiFi
+                            </span>
+
+                        </div>
+
+
+                        <div class="room-bottom">
+
+                            <strong>
+                                ₹12,000
+                                <small>/ night</small>
+                            </strong>
+
+
+                            <button
+                                class="book-btn"
+                                onclick="event.stopPropagation(); showRoomDetails('Private Pool Villa')"
+                            >
+                                Book Now
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OFFERS ================= -->
+
+<section
+    class="offers-section"
+    id="offers"
+>
+
+    <div class="container">
+
+        <div class="section-heading-center">
+
+            <p class="section-label">
+                SPECIAL OFFERS
+            </p>
+
+            <h2>
+                Exclusive Offers
+            </h2>
+
+            <p>
+                Make your stay even more memorable with our special packages.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="offer-card">
+
+                    <div class="offer-icon">
+                        <i class="bi bi-cup-hot"></i>
+                    </div>
+
+                    <span class="offer-label">
+                        BREAKFAST
+                    </span>
+
+                    <h3>
+                        Stay & Breakfast
+                    </h3>
+
+                    <p>
+                        Enjoy a comfortable stay with a delicious breakfast
+                        included every morning.
                     </p>
 
+                    <div class="offer-price">
+
+                        <strong>
+                            ₹1,000
+                        </strong>
+
+                        <span>
+                            breakfast package
+                        </span>
+
+                    </div>
 
                     <a
-                        href="rooms.html"
-                        class="btn discover-btn"
+                        href="#rooms"
+                        class="offer-btn"
+                    >
+
+                        Book Your Stay
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="offer-card featured-offer">
+
+                    <div class="offer-icon">
+                        <i class="bi bi-stars"></i>
+                    </div>
+
+                    <span class="offer-label">
+                        PREMIUM
+                    </span>
+
+                    <h3>
+                        Luxury Escape
+                    </h3>
+
+                    <p>
+                        Upgrade your experience with premium services
+                        designed for a luxurious stay.
+                    </p>
+
+                    <div class="offer-price">
+
+                        <strong>
+                            ₹2,500
+                        </strong>
+
+                        <span>
+                            premium package
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="#rooms"
+                        class="offer-btn"
+                    >
+
+                        Explore Rooms
+
+                        <i class="bi bi-arrow-right"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="offer-card">
+
+                    <div class="offer-icon">
+                        <i class="bi bi-heart"></i>
+                    </div>
+
+                    <span class="offer-label">
+                        EXPERIENCE
+                    </span>
+
+                    <h3>
+                        Complete Experience
+                    </h3>
+
+                    <p>
+                        Treat yourself to an unforgettable stay with
+                        our complete premium experience.
+                    </p>
+
+                    <div class="offer-price">
+
+                        <strong>
+                            ₹3,500
+                        </strong>
+
+                        <span>
+                            complete package
+                        </span>
+
+                    </div>
+
+                    <a
+                        href="#rooms"
+                        class="offer-btn"
                     >
 
                         Discover More
@@ -242,254 +1018,140 @@
 
             </div>
 
+        </div>
 
-            <!-- ================= BOOKING BOX ================= -->
+    </div>
 
-            <div class="booking-box">
-
-
-                <div class="booking-item">
-
-                    <i class="bi bi-calendar3"></i>
-
-                    <div>
-
-                        <small>
-                            Check-in
-                        </small>
-
-                        <input
-                            type="date"
-                            id="checkIn"
-                        >
-
-                    </div>
-
-                </div>
+</section>
 
 
-                <div class="booking-item">
+<!-- ================= ABOUT ================= -->
 
-                    <i class="bi bi-calendar3"></i>
+<section
+    class="about-section"
+    id="about"
+>
 
-                    <div>
+    <div class="container">
 
-                        <small>
-                            Check-out
-                        </small>
+        <div class="row align-items-center g-5">
 
-                        <input
-                            type="date"
-                            id="checkOut"
-                        >
+
+            <div class="col-lg-6">
+
+                <div class="about-image">
+
+                    <img
+                        src="assets/about-hotel.webp"
+                        alt="GLA Hotel"
+                    >
+
+                    <div class="about-experience">
+
+                        <strong>
+                            10+
+                        </strong>
+
+                        <span>
+                            Years of<br>
+                            Hospitality
+                        </span>
 
                     </div>
 
                 </div>
-
-
-                <div class="booking-item">
-
-                    <i class="bi bi-people"></i>
-
-                    <div>
-
-                        <small>
-                            Guests
-                        </small>
-
-
-                        <select id="guests">
-
-                            <option value="1">
-                                1 Guest
-                            </option>
-
-                            <option
-                                value="2"
-                                selected
-                            >
-                                2 Guests
-                            </option>
-
-                            <option value="3">
-                                3 Guests
-                            </option>
-
-                            <option value="4">
-                                4 Guests
-                            </option>
-
-                            <option value="5">
-                                5 Guests
-                            </option>
-
-                            <option value="6">
-                                6 Guests
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                </div>
-
-
-                <button
-                    class="search-rooms-btn"
-                    onclick="searchRooms()"
-                >
-
-                    Search Rooms
-
-                    <i class="bi bi-arrow-right"></i>
-
-                </button>
 
             </div>
 
-        </div>
 
-    </section>
+            <div class="col-lg-6">
 
+                <p class="section-label">
+                    ABOUT GLA HOTEL
+                </p>
 
-    <!-- ================= FEATURES ================= -->
+                <h2>
 
-    <section class="features">
+                    A Place Beyond<br>
 
-        <div class="container">
+                    <span>
+                        Ordinary
+                    </span>
 
-            <div class="row text-center">
-
-
-                <div class="col-md-3 feature-item">
-
-                    <div class="feature-icon">
-                        <i class="bi bi-tag"></i>
-                    </div>
-
-                    <div>
-
-                        <h6>
-                            Best Price
-                        </h6>
-
-                        <p>
-                            Guarantee
-                        </p>
-
-                    </div>
-
-                </div>
+                </h2>
 
 
-                <div class="col-md-3 feature-item">
+                <p class="about-text">
 
-                    <div class="feature-icon">
-                        <i class="bi bi-cup-hot"></i>
-                    </div>
+                    GLA Hotel is designed for guests who value comfort,
+                    elegance and unforgettable experiences.
+
+                </p>
+
+
+                <p class="about-text">
+
+                    From beautifully designed rooms to thoughtful
+                    hospitality, every part of your stay is created
+                    to make you feel relaxed, welcome and at home.
+
+                </p>
+
+
+                <div class="about-features">
 
                     <div>
 
-                        <h6>
+                        <i class="bi bi-check-circle"></i>
+
+                        <span>
+                            Premium Rooms
+                        </span>
+
+                    </div>
+
+
+                    <div>
+
+                        <i class="bi bi-check-circle"></i>
+
+                        <span>
                             Fine Dining
-                        </h6>
-
-                        <p>
-                            Experiences
-                        </p>
+                        </span>
 
                     </div>
 
-                </div>
-
-
-                <div class="col-md-3 feature-item">
-
-                    <div class="feature-icon">
-                        <i class="bi bi-flower1"></i>
-                    </div>
 
                     <div>
 
-                        <h6>
-                            Wellness
-                        </h6>
+                        <i class="bi bi-check-circle"></i>
 
-                        <p>
-                            & Spa
-                        </p>
+                        <span>
+                            Wellness & Spa
+                        </span>
 
                     </div>
 
-                </div>
-
-
-                <div class="col-md-3 feature-item">
-
-                    <div class="feature-icon">
-                        <i class="bi bi-headset"></i>
-                    </div>
 
                     <div>
 
-                        <h6>
-                            24/7
-                        </h6>
+                        <i class="bi bi-check-circle"></i>
 
-                        <p>
-                            Support
-                        </p>
+                        <span>
+                            24/7 Guest Support
+                        </span>
 
                     </div>
-
-                </div>
-
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- ================= ROOMS ================= -->
-
-    <section
-        class="rooms-section"
-        id="rooms"
-    >
-
-        <div class="container">
-
-
-            <div class="section-heading">
-
-                <div>
-
-                    <p class="section-label">
-                        OUR ROOMS
-                    </p>
-
-
-                    <h2>
-                        Featured Rooms
-                    </h2>
-
-
-                    <p>
-                        Comfort. Elegance. A stay you'll always remember.
-                    </p>
 
                 </div>
 
 
                 <a
-                    href="rooms.html"
-                    class="view-all"
+                    href="#contact"
+                    class="about-btn"
                 >
 
-                    View All Rooms
+                    Contact Us
 
                     <i class="bi bi-arrow-right"></i>
 
@@ -497,414 +1159,243 @@
 
             </div>
 
+        </div>
 
-            <div class="row g-4">
+    </div>
 
+</section>
 
-                <!-- DELUXE ROOM -->
 
-                <div class="col-lg-3 col-md-6">
+<!-- ================= CONTACT ================= -->
 
-                    <div
-                        class="room-card"
-                        onclick="showRoomDetails('Deluxe Room')"
-                    >
+<section
+    class="contact-section"
+    id="contact"
+>
 
-                        <div class="room-image">
+    <div class="container">
 
-                            <img
-                                src="assets/room-deluxe.jpg"
-                                alt="Deluxe Room"
-                            >
+        <div class="section-heading-center">
 
+            <p class="section-label">
+                GET IN TOUCH
+            </p>
 
-                            <span class="room-badge">
-                                Popular
-                            </span>
+            <h2>
+                Contact Us
+            </h2>
 
-                        </div>
-
-
-                        <div class="room-content">
-
-                            <h3>
-                                Deluxe Room
-                            </h3>
-
-
-                            <p class="room-description">
-                                A perfect blend of comfort and elegance.
-                            </p>
-
-
-                            <div class="room-info">
-
-                                <span>
-                                    <i class="bi bi-people"></i>
-                                    2 Guests
-                                </span>
-
-                                <span>
-                                    <i class="bi bi-bed"></i>
-                                    1 King Bed
-                                </span>
-
-                                <span>
-                                    <i class="bi bi-wifi"></i>
-                                    WiFi
-                                </span>
-
-                            </div>
-
-
-                            <div class="room-bottom">
-
-                                <strong>
-                                    ₹4,500
-                                    <small>/ night</small>
-                                </strong>
-
-
-                                <button
-                                    class="book-btn"
-                                    onclick="event.stopPropagation(); showRoomDetails('Deluxe Room')"
-                                >
-                                    Book Now
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- EXECUTIVE SUITE -->
-
-                <div class="col-lg-3 col-md-6">
-
-                    <div
-                        class="room-card"
-                        onclick="showRoomDetails('Executive Suite')"
-                    >
-
-                        <div class="room-image">
-
-                            <img
-                                src="assets/room-suite.jpg"
-                                alt="Executive Suite"
-                            >
-
-                        </div>
-
-
-                        <div class="room-content">
-
-                            <h3>
-                                Executive Suite
-                            </h3>
-
-
-                            <p class="room-description">
-                                More space for a memorable stay.
-                            </p>
-
-
-                            <div class="room-info">
-
-                                <span>
-                                    <i class="bi bi-people"></i>
-                                    4 Guests
-                                </span>
-
-                                <span>
-                                    <i class="bi bi-bed"></i>
-                                    1 King Bed
-                                </span>
-
-                                <span>
-                                    <i class="bi bi-wifi"></i>
-                                    WiFi
-                                </span>
-
-                            </div>
-
-
-                            <div class="room-bottom">
-
-                                <strong>
-                                    ₹8,200
-                                    <small>/ night</small>
-                                </strong>
-
-
-                                <button
-                                    class="book-btn"
-                                    onclick="event.stopPropagation(); showRoomDetails('Executive Suite')"
-                                >
-                                    Book Now
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- SEA VIEW -->
-
-                <div class="col-lg-3 col-md-6">
-
-                    <div
-                        class="room-card"
-                        onclick="showRoomDetails('Premium Sea View')"
-                    >
-
-                        <div class="room-image">
-
-                            <img
-                                src="assets/room-seaview.jpg"
-                                alt="Premium Sea View"
-                            >
-
-
-                            <span class="room-badge">
-                                Sea View
-                            </span>
-
-                        </div>
-
-
-                        <div class="room-content">
-
-                            <h3>
-                                Premium Sea View
-                            </h3>
-
-
-                            <p class="room-description">
-                                Wake up to breathtaking views.
-                            </p>
-
-
-                            <div class="room-info">
-
-                                <span>
-                                    <i class="bi bi-people"></i>
-                                    2 Guests
-                                </span>
-
-                                <span>
-                                    <i class="bi bi-bed"></i>
-                                    1 King Bed
-                                </span>
-
-                                <span>
-                                    <i class="bi bi-wifi"></i>
-                                    WiFi
-                                </span>
-
-                            </div>
-
-
-                            <div class="room-bottom">
-
-                                <strong>
-                                    ₹6,800
-                                    <small>/ night</small>
-                                </strong>
-
-
-                                <button
-                                    class="book-btn"
-                                    onclick="event.stopPropagation(); showRoomDetails('Premium Sea View')"
-                                >
-                                    Book Now
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- PRIVATE VILLA -->
-
-                <div class="col-lg-3 col-md-6">
-
-                    <div
-                        class="room-card"
-                        onclick="showRoomDetails('Private Pool Villa')"
-                    >
-
-                        <div class="room-image">
-
-                            <img
-                                src="assets/room-villa.jpg"
-                                alt="Private Pool Villa"
-                            >
-
-
-                            <span class="room-badge">
-                                Luxury
-                            </span>
-
-                        </div>
-
-
-                        <div class="room-content">
-
-                            <h3>
-                                Private Pool Villa
-                            </h3>
-
-
-                            <p class="room-description">
-                                Your own private escape.
-                            </p>
-
-
-                            <div class="room-info">
-
-                                <span>
-                                    <i class="bi bi-people"></i>
-                                    4 Guests
-                                </span>
-
-                                <span>
-                                    <i class="bi bi-bed"></i>
-                                    2 Beds
-                                </span>
-
-                                <span>
-                                    <i class="bi bi-wifi"></i>
-                                    WiFi
-                                </span>
-
-                            </div>
-
-
-                            <div class="room-bottom">
-
-                                <strong>
-                                    ₹12,000
-                                    <small>/ night</small>
-                                </strong>
-
-
-                                <button
-                                    class="book-btn"
-                                    onclick="event.stopPropagation(); showRoomDetails('Private Pool Villa')"
-                                >
-                                    Book Now
-                                </button>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-            </div>
+            <p>
+                We're here to help make your stay memorable.
+            </p>
 
         </div>
 
-    </section>
+
+        <div class="row g-4">
 
 
-    <!-- ================= ROOM MODAL ================= -->
+            <div class="col-lg-5">
 
-    <div
-        class="modal fade"
-        id="roomModal"
-        tabindex="-1"
-    >
+                <div class="contact-info">
 
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+                    <h3>
+                        Let's Talk
+                    </h3>
 
-            <div class="modal-content">
-
-                <div class="modal-header">
-
-                    <h5
-                        class="modal-title"
-                        id="modalRoomName"
-                    >
-                        Room Details
-                    </h5>
+                    <p>
+                        Have a question about our rooms, reservations
+                        or services? Get in touch with our team.
+                    </p>
 
 
-                    <button
-                        type="button"
-                        class="btn-close"
-                        data-bs-dismiss="modal"
-                    ></button>
+                    <div class="contact-item">
 
-                </div>
+                        <div class="contact-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
 
+                        <div>
 
-                <div class="modal-body">
+                            <span>
+                                ADDRESS
+                            </span>
 
-                    <img
-                        id="modalRoomImage"
-                        src=""
-                        class="img-fluid rounded mb-4"
-                        alt="Room"
-                    >
+                            <p>
+                                GLA Hotel, Mathura, Uttar Pradesh, India
+                            </p>
 
-
-                    <h3 id="modalRoomTitle"></h3>
-
-
-                    <p id="modalRoomDescription"></p>
-
-
-                    <div class="modal-room-info">
-
-                        <span id="modalGuests"></span>
-
-                        <span id="modalBed"></span>
-
-                        <span>
-                            <i class="bi bi-wifi"></i>
-                            WiFi
-                        </span>
+                        </div>
 
                     </div>
 
 
-                    <h4 id="modalPrice"></h4>
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                PHONE
+                            </span>
+
+                            <p>
+                                +91 98765 43210
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                EMAIL
+                            </span>
+
+                            <p>
+                                info@glahotel.com
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <div class="contact-icon">
+                            <i class="bi bi-clock"></i>
+                        </div>
+
+                        <div>
+
+                            <span>
+                                RECEPTION
+                            </span>
+
+                            <p>
+                                Open 24 Hours
+                            </p>
+
+                        </div>
+
+                    </div>
 
                 </div>
 
-
-                <div class="modal-footer">
-
-                    <button
-                        class="btn btn-secondary"
-                        data-bs-dismiss="modal"
-                    >
-                        Close
-                    </button>
+            </div>
 
 
-                    <button
-                        class="book-btn"
-                        onclick="goToBooking()"
-                    >
-                        Book Now
-                    </button>
+            <div class="col-lg-7">
+
+                <div class="contact-form-card">
+
+                    <h3>
+                        Send Us a Message
+                    </h3>
+
+
+                    <form id="contactForm">
+
+                        <div class="row g-3">
+
+                            <div class="col-md-6">
+
+                                <label for="contactName">
+                                    Your Name
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="contactName"
+                                    class="form-control"
+                                    placeholder="Enter your name"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="col-md-6">
+
+                                <label for="contactEmail">
+                                    Email Address
+                                </label>
+
+                                <input
+                                    type="email"
+                                    id="contactEmail"
+                                    class="form-control"
+                                    placeholder="Enter your email"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <label for="contactSubject">
+                                    Subject
+                                </label>
+
+                                <input
+                                    type="text"
+                                    id="contactSubject"
+                                    class="form-control"
+                                    placeholder="How can we help?"
+                                    required
+                                >
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <label for="contactMessage">
+                                    Message
+                                </label>
+
+                                <textarea
+                                    id="contactMessage"
+                                    class="form-control"
+                                    rows="5"
+                                    placeholder="Write your message..."
+                                    required
+                                ></textarea>
+
+                            </div>
+
+
+                            <div class="col-12">
+
+                                <button
+                                    type="submit"
+                                    class="contact-submit"
+                                >
+
+                                    Send Message
+
+                                    <i class="bi bi-arrow-right"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </form>
 
                 </div>
 
@@ -914,49 +1405,445 @@
 
     </div>
 
+</section>
 
-    <!-- ================= FOOTER ================= -->
 
-    <footer class="footer">
+<!-- ================= LOGIN / SIGNUP MODAL ================= -->
 
-        <div class="container">
+<div
+    class="modal fade"
+    id="authModal"
+    tabindex="-1"
+    aria-hidden="true"
+>
 
-            <div class="row align-items-center">
+    <div class="modal-dialog modal-dialog-centered">
 
-                <div class="col-md-6">
+        <div class="modal-content auth-modal">
 
-                    <p class="footer-quote">
-                        "More Than a Stay, A Story."
-                    </p>
+
+            <button
+                type="button"
+                class="auth-close"
+                data-bs-dismiss="modal"
+            >
+
+                <i class="bi bi-x-lg"></i>
+
+            </button>
+
+
+            <div class="auth-header">
+
+                <div class="auth-logo">
+                    GLA
+                </div>
+
+                <h2 id="authTitle">
+                    Welcome Back
+                </h2>
+
+                <p id="authSubtitle">
+                    Login to manage your reservations.
+                </p>
+
+            </div>
+
+
+            <div class="auth-switch">
+
+                <button
+                    type="button"
+                    id="loginTab"
+                    class="auth-tab active"
+                    onclick="switchAuth('login')"
+                >
+                    Login
+                </button>
+
+                <button
+                    type="button"
+                    id="signupTab"
+                    class="auth-tab"
+                    onclick="switchAuth('signup')"
+                >
+                    Sign Up
+                </button>
+
+            </div>
+
+
+            <!-- LOGIN -->
+
+            <form
+                id="loginForm"
+                class="auth-form"
+            >
+
+                <div class="auth-input">
+
+                    <i class="bi bi-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="loginEmail"
+                        placeholder="Email Address"
+                        required
+                    >
 
                 </div>
 
 
-                <div class="col-md-6 text-md-end">
+                <div class="auth-input">
 
-                    <p>
-                        © 2026 GLA Hotel. All Rights Reserved.
-                    </p>
+                    <i class="bi bi-lock"></i>
+
+                    <input
+                        type="password"
+                        id="loginPassword"
+                        placeholder="Password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        onclick="togglePassword('loginPassword', this)"
+                    >
+
+                        <i class="bi bi-eye"></i>
+
+                    </button>
 
                 </div>
+
+
+                <div class="auth-options">
+
+                    <label>
+
+                        <input
+                            type="checkbox"
+                            id="rememberMe"
+                        >
+
+                        Remember me
+
+                    </label>
+
+
+                    <a href="#">
+                        Forgot Password?
+                    </a>
+
+                </div>
+
+
+                <button
+                    type="submit"
+                    class="auth-submit"
+                >
+
+                    Login
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </button>
+
+
+                <p class="auth-bottom-text">
+
+                    Don't have an account?
+
+                    <button
+                        type="button"
+                        onclick="switchAuth('signup')"
+                    >
+                        Sign Up
+                    </button>
+
+                </p>
+
+            </form>
+
+
+            <!-- SIGN UP -->
+
+            <form
+                id="signupForm"
+                class="auth-form"
+                style="display: none;"
+            >
+
+                <div class="auth-row">
+
+                    <div class="auth-input">
+
+                        <i class="bi bi-person"></i>
+
+                        <input
+                            type="text"
+                            id="signupFirstName"
+                            placeholder="First Name"
+                            required
+                        >
+
+                    </div>
+
+
+                    <div class="auth-input">
+
+                        <i class="bi bi-person"></i>
+
+                        <input
+                            type="text"
+                            id="signupLastName"
+                            placeholder="Last Name"
+                            required
+                        >
+
+                    </div>
+
+                </div>
+
+
+                <div class="auth-input">
+
+                    <i class="bi bi-envelope"></i>
+
+                    <input
+                        type="email"
+                        id="signupEmail"
+                        placeholder="Email Address"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="auth-input">
+
+                    <i class="bi bi-lock"></i>
+
+                    <input
+                        type="password"
+                        id="signupPassword"
+                        placeholder="Create Password"
+                        required
+                    >
+
+                    <button
+                        type="button"
+                        class="password-toggle"
+                        onclick="togglePassword('signupPassword', this)"
+                    >
+
+                        <i class="bi bi-eye"></i>
+
+                    </button>
+
+                </div>
+
+
+                <div class="auth-input">
+
+                    <i class="bi bi-lock-fill"></i>
+
+                    <input
+                        type="password"
+                        id="confirmPassword"
+                        placeholder="Confirm Password"
+                        required
+                    >
+
+                </div>
+
+
+                <label class="terms-check">
+
+                    <input
+                        type="checkbox"
+                        required
+                    >
+
+                    <span>
+                        I agree to the Terms & Conditions
+                    </span>
+
+                </label>
+
+
+                <button
+                    type="submit"
+                    class="auth-submit"
+                >
+
+                    Create Account
+
+                    <i class="bi bi-arrow-right"></i>
+
+                </button>
+
+
+                <p class="auth-bottom-text">
+
+                    Already have an account?
+
+                    <button
+                        type="button"
+                        onclick="switchAuth('login')"
+                    >
+                        Login
+                    </button>
+
+                </p>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= ROOM MODAL ================= -->
+
+<div
+    class="modal fade"
+    id="roomModal"
+    tabindex="-1"
+>
+
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+
+        <div class="modal-content">
+
+            <div class="modal-header">
+
+                <h5
+                    class="modal-title"
+                    id="modalRoomName"
+                >
+                    Room Details
+                </h5>
+
+
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                ></button>
+
+            </div>
+
+
+            <div class="modal-body">
+
+                <img
+                    id="modalRoomImage"
+                    src=""
+                    class="img-fluid rounded mb-4"
+                    alt="Room"
+                >
+
+
+                <h3 id="modalRoomTitle"></h3>
+
+
+                <p id="modalRoomDescription"></p>
+
+
+                <div class="modal-room-info">
+
+                    <span id="modalGuests"></span>
+
+                    <span id="modalBed"></span>
+
+                    <span>
+
+                        <i class="bi bi-wifi"></i>
+
+                        WiFi
+
+                    </span>
+
+                </div>
+
+
+                <h4 id="modalPrice"></h4>
+
+            </div>
+
+
+            <div class="modal-footer">
+
+                <button
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                >
+                    Close
+                </button>
+
+
+                <button
+                    class="book-btn"
+                    onclick="goToBooking()"
+                >
+                    Book Now
+                </button>
 
             </div>
 
         </div>
 
-    </footer>
+    </div>
+
+</div>
 
 
-    <!-- Bootstrap JS -->
+<!-- ================= FOOTER ================= -->
 
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
-    </script>
+<footer class="footer">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-md-6">
+
+                <p class="footer-quote">
+                    "More Than a Stay, A Story."
+                </p>
+
+            </div>
 
 
-    <!-- Custom JS -->
+            <div class="col-md-6 text-md-end">
 
-    <script src="script.js"></script>
+                <p>
+                    © 2026 GLA Hotel. All Rights Reserved.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<!-- Bootstrap JS -->
+
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+
+<!-- Custom JS -->
+
+<script src="script.js"></script>
 
 </body>
 

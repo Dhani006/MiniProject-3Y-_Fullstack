@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -27,9 +26,13 @@ img {
     position: absolute;
     top: 0;
     left: 0;
+
     width: 100%;
+
     z-index: 10;
+
     padding: 15px 0;
+
     background: transparent;
 }
 
@@ -40,8 +43,12 @@ img {
 
 .nav-link {
     color: white !important;
+
     margin: 0 12px;
+
     font-size: 15px;
+
+    transition: 0.3s;
 }
 
 .nav-link:hover,
@@ -51,34 +58,47 @@ img {
 
 .navbar-buttons {
     display: flex;
+
     align-items: center;
+
     gap: 12px;
 }
 
 .search-icon {
     border: none;
+
     background: transparent;
+
     color: white;
+
     font-size: 20px;
+
     cursor: pointer;
 }
 
 .login-btn {
     color: white;
+
     border: 1px solid rgba(255,255,255,0.7);
+
     padding: 10px 22px;
+
     border-radius: 6px;
 }
 
 .login-btn:hover {
     background: white;
+
     color: #102a22;
 }
 
 .signup-btn {
     background: #d6b56c;
+
     color: #111;
+
     padding: 10px 22px;
+
     border-radius: 6px;
 }
 
@@ -87,16 +107,21 @@ img {
 }
 
 
-/* ================= SEARCH POPUP ================= */
+/* ================= SEARCH ================= */
 
 .search-overlay {
     position: fixed;
+
     inset: 0;
+
     background: rgba(0, 0, 0, 0.65);
+
     z-index: 9999;
 
     display: none;
+
     align-items: flex-start;
+
     justify-content: center;
 
     padding: 120px 20px 30px;
@@ -108,33 +133,43 @@ img {
 
 .search-popup {
     position: relative;
+
     width: 100%;
+
     max-width: 600px;
 
     background: white;
+
     padding: 35px;
 
     border-radius: 12px;
 
-    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    box-shadow:
+        0 15px 50px rgba(0, 0, 0, 0.3);
 }
 
 .search-popup h3 {
     font-family: Georgia, serif;
+
     margin-bottom: 25px;
+
     color: #102a22;
 }
 
 .search-close {
     position: absolute;
+
     top: 15px;
     right: 18px;
 
     border: none;
+
     background: transparent;
 
     font-size: 18px;
+
     color: #555;
+
     cursor: pointer;
 }
 
@@ -142,6 +177,7 @@ img {
     display: flex;
 
     border: 1px solid #ddd;
+
     border-radius: 7px;
 
     overflow: hidden;
@@ -149,21 +185,27 @@ img {
 
 .search-input-box input {
     flex: 1;
+
     min-width: 0;
 
     border: none;
+
     outline: none;
 
     padding: 13px 15px;
+
     font-size: 15px;
 }
 
 .search-input-box button {
     width: 55px;
+
     flex-shrink: 0;
 
     border: none;
+
     background: #102a22;
+
     color: white;
 
     cursor: pointer;
@@ -171,12 +213,15 @@ img {
 
 .search-input-box button:hover {
     background: #d6b56c;
+
     color: #111;
 }
 
 #searchMessage {
     margin: 15px 0 0;
+
     color: #777;
+
     font-size: 14px;
 }
 
@@ -188,16 +233,23 @@ img {
 
     position: relative;
 
-    background-image: url("assets/hero.jpg");
+    background-image:
+        url("assets/hero.webp");
+
     background-size: cover;
+
     background-position: center;
 
     display: flex;
+
     align-items: center;
+
+    scroll-margin-top: 80px;
 }
 
 .hero-overlay {
     position: absolute;
+
     inset: 0;
 
     background:
@@ -211,6 +263,7 @@ img {
 
 .hero-content {
     position: relative;
+
     z-index: 2;
 
     padding-top: 100px;
@@ -218,8 +271,11 @@ img {
 
 .hero-small-text {
     color: #d6b56c;
+
     font-size: 14px;
+
     letter-spacing: 5px;
+
     margin-bottom: 18px;
 }
 
@@ -227,7 +283,9 @@ img {
     color: white;
 
     font-family: Georgia, serif;
+
     font-size: 70px;
+
     line-height: 1;
 
     margin-bottom: 25px;
@@ -241,9 +299,11 @@ img {
     color: white;
 
     font-size: 18px;
+
     line-height: 1.6;
 
     max-width: 550px;
+
     margin-bottom: 30px;
 }
 
@@ -251,12 +311,15 @@ img {
     display: inline-block;
 
     background: #d6b56c;
+
     color: #111;
 
     padding: 13px 25px;
+
     border-radius: 5px;
 
     font-weight: 500;
+
     text-decoration: none;
 }
 
@@ -271,6 +334,7 @@ img {
     position: absolute;
 
     bottom: -45px;
+
     left: 0;
     right: 0;
 
@@ -281,15 +345,19 @@ img {
     padding: 20px;
 
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1.1fr;
+
+    grid-template-columns:
+        1fr 1fr 1fr 1.1fr;
 
     gap: 15px;
 
-    box-shadow: 0 10px 35px rgba(0,0,0,0.18);
+    box-shadow:
+        0 10px 35px rgba(0,0,0,0.18);
 }
 
 .booking-item {
     display: flex;
+
     align-items: center;
 
     gap: 15px;
@@ -301,13 +369,17 @@ img {
 
 .booking-item > i {
     font-size: 24px;
+
     color: #174033;
+
     flex-shrink: 0;
 }
 
 .booking-item small {
     display: block;
+
     color: #777;
+
     margin-bottom: 4px;
 }
 
@@ -316,9 +388,11 @@ img {
     max-width: 100%;
 
     border: none;
+
     outline: none;
 
     font-size: 15px;
+
     font-weight: 600;
 
     background: transparent;
@@ -326,12 +400,15 @@ img {
 
 .search-rooms-btn {
     border: none;
+
     border-radius: 7px;
 
     background: #102a22;
+
     color: white;
 
     font-size: 16px;
+
     font-weight: 600;
 
     transition: 0.3s;
@@ -339,6 +416,7 @@ img {
 
 .search-rooms-btn:hover {
     background: #d6b56c;
+
     color: #111;
 }
 
@@ -347,6 +425,7 @@ img {
 
 .features {
     background: #102a22;
+
     color: white;
 
     padding: 75px 0 30px;
@@ -354,12 +433,15 @@ img {
 
 .feature-item {
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 15px;
 
-    border-right: 1px solid rgba(255,255,255,0.2);
+    border-right:
+        1px solid rgba(255,255,255,0.2);
 }
 
 .feature-item:last-child {
@@ -369,21 +451,27 @@ img {
 .feature-icon {
     width: 50px;
     height: 50px;
+
     min-width: 50px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border: 1px solid #d6b56c;
+
     border-radius: 50%;
 
     color: #d6b56c;
+
     font-size: 20px;
 }
 
 .feature-item h6 {
     margin: 0;
+
     font-size: 15px;
 }
 
@@ -391,7 +479,19 @@ img {
     margin: 2px 0 0;
 
     color: #ccc;
+
     font-size: 13px;
+}
+
+
+/* ================= SECTION OFFSET ================= */
+
+#home,
+#rooms,
+#offers,
+#about,
+#contact {
+    scroll-margin-top: 80px;
 }
 
 
@@ -399,12 +499,15 @@ img {
 
 .rooms-section {
     padding: 80px 0;
+
     background: #f7f4ed;
 }
 
 .section-heading {
     display: flex;
+
     justify-content: space-between;
+
     align-items: end;
 
     margin-bottom: 35px;
@@ -416,12 +519,15 @@ img {
     color: #b18a3b;
 
     letter-spacing: 4px;
+
     font-size: 13px;
+
     font-weight: 600;
 }
 
 .section-heading h2 {
     font-family: Georgia, serif;
+
     font-size: 45px;
 
     margin-bottom: 8px;
@@ -433,7 +539,9 @@ img {
 
 .view-all {
     color: #102a22;
+
     text-decoration: none;
+
     font-weight: 600;
 
     white-space: nowrap;
@@ -452,9 +560,11 @@ img {
     background: white;
 
     border-radius: 10px;
+
     overflow: hidden;
 
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    box-shadow:
+        0 5px 20px rgba(0,0,0,0.08);
 
     transition: 0.3s;
 
@@ -463,7 +573,9 @@ img {
 
 .room-card:hover {
     transform: translateY(-7px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+
+    box-shadow:
+        0 12px 30px rgba(0,0,0,0.15);
 }
 
 .room-image {
@@ -476,6 +588,7 @@ img {
 
 .room-image img {
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
@@ -491,9 +604,11 @@ img {
     position: absolute;
 
     top: 12px;
+
     right: 12px;
 
     background: #d6b56c;
+
     color: #111;
 
     padding: 6px 12px;
@@ -501,6 +616,7 @@ img {
     border-radius: 20px;
 
     font-size: 12px;
+
     font-weight: 600;
 }
 
@@ -510,6 +626,7 @@ img {
 
 .room-content h3 {
     font-family: Georgia, serif;
+
     font-size: 22px;
 
     margin-bottom: 6px;
@@ -525,11 +642,13 @@ img {
 
 .room-info {
     display: flex;
+
     gap: 10px;
 
     flex-wrap: wrap;
 
     font-size: 11px;
+
     color: #555;
 
     margin-bottom: 18px;
@@ -537,6 +656,7 @@ img {
 
 .room-info span {
     display: flex;
+
     align-items: center;
 
     gap: 4px;
@@ -548,7 +668,9 @@ img {
 
 .room-bottom {
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     gap: 8px;
@@ -556,12 +678,15 @@ img {
 
 .room-bottom strong {
     color: #b18a3b;
+
     font-size: 17px;
 }
 
 .room-bottom strong small {
     color: #777;
+
     font-size: 11px;
+
     font-weight: normal;
 }
 
@@ -569,6 +694,7 @@ img {
     border: none;
 
     background: #102a22;
+
     color: white;
 
     padding: 9px 13px;
@@ -582,21 +708,831 @@ img {
 
 .book-btn:hover {
     background: #d6b56c;
+
     color: #111;
 }
 
 
-/* ================= MODAL ================= */
+/* ================= OFFERS ================= */
+
+.offers-section {
+    padding: 100px 0;
+
+    background: white;
+}
+
+.section-heading-center {
+    text-align: center;
+
+    max-width: 650px;
+
+    margin: 0 auto 55px;
+}
+
+.section-heading-center h2 {
+    font-family: Georgia, serif;
+
+    font-size: 45px;
+
+    color: #102a22;
+
+    margin-bottom: 12px;
+}
+
+.section-heading-center p:last-child {
+    color: #777;
+
+    margin-bottom: 0;
+}
+
+.offer-card {
+    height: 100%;
+
+    background: #f7f4ed;
+
+    padding: 35px;
+
+    border-radius: 8px;
+
+    border: 1px solid #eee;
+
+    transition: 0.3s ease;
+}
+
+.offer-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.offer-icon {
+    width: 55px;
+    height: 55px;
+
+    background: #102a22;
+
+    color: #d6b56c;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 23px;
+
+    margin-bottom: 25px;
+}
+
+.offer-label {
+    color: #d6b56c;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+}
+
+.offer-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 25px;
+
+    margin: 10px 0;
+
+    color: #102a22;
+}
+
+.offer-card > p {
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    min-height: 70px;
+}
+
+.offer-price {
+    display: flex;
+
+    align-items: baseline;
+
+    gap: 8px;
+
+    margin: 25px 0;
+}
+
+.offer-price strong {
+    font-size: 25px;
+
+    color: #102a22;
+}
+
+.offer-price span {
+    color: #888;
+
+    font-size: 12px;
+}
+
+.offer-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    color: #102a22;
+
+    text-decoration: none;
+
+    font-weight: 600;
+
+    font-size: 14px;
+}
+
+.offer-btn:hover {
+    color: #b18d40;
+}
+
+.featured-offer {
+    background: #102a22;
+}
+
+.featured-offer h3 {
+    color: white;
+}
+
+.featured-offer > p {
+    color: #ccc;
+}
+
+.featured-offer .offer-price strong {
+    color: #d6b56c;
+}
+
+.featured-offer .offer-price span {
+    color: #aaa;
+}
+
+.featured-offer .offer-btn {
+    color: #d6b56c;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-section {
+    padding: 100px 0;
+
+    background: #f7f4ed;
+}
+
+.about-image {
+    position: relative;
+}
+
+.about-image img {
+    width: 100%;
+
+    height: 520px;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+}
+
+.about-experience {
+    position: absolute;
+
+    right: -20px;
+
+    bottom: 30px;
+
+    background: #102a22;
+
+    color: white;
+
+    padding: 20px 25px;
+
+    border-radius: 5px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.about-experience strong {
+    color: #d6b56c;
+
+    font-size: 35px;
+}
+
+.about-experience span {
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+.about-section h2 {
+    font-family: Georgia, serif;
+
+    font-size: 44px;
+
+    line-height: 1.15;
+
+    margin: 15px 0 25px;
+
+    color: #102a22;
+}
+
+.about-section h2 span {
+    color: #d6b56c;
+}
+
+.about-text {
+    color: #777;
+
+    line-height: 1.8;
+
+    font-size: 15px;
+}
+
+.about-features {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    margin: 30px 0;
+}
+
+.about-features div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.about-features i {
+    color: #d6b56c;
+
+    font-size: 17px;
+}
+
+.about-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: #102a22;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 13px 22px;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.about-btn:hover {
+    background: #d6b56c;
+
+    color: #102a22;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact-section {
+    padding: 100px 0;
+
+    background: white;
+}
+
+.contact-info {
+    background: #102a22;
+
+    color: white;
+
+    padding: 40px;
+
+    height: 100%;
+
+    border-radius: 8px;
+}
+
+.contact-info h3 {
+    font-family: Georgia, serif;
+
+    font-size: 30px;
+
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    color: #ccc;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+}
+
+.contact-item {
+    display: flex;
+
+    gap: 15px;
+
+    align-items: flex-start;
+
+    margin-bottom: 25px;
+}
+
+.contact-icon {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border: 1px solid #d6b56c;
+
+    color: #d6b56c;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.contact-item span {
+    color: #d6b56c;
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+}
+
+.contact-item p {
+    color: white;
+
+    margin: 5px 0 0;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+.contact-form-card {
+    background: #f7f4ed;
+
+    padding: 40px;
+
+    border-radius: 8px;
+
+    height: 100%;
+
+    box-shadow:
+        0 5px 25px rgba(0, 0, 0, 0.05);
+}
+
+.contact-form-card h3 {
+    font-family: Georgia, serif;
+
+    font-size: 27px;
+
+    margin-bottom: 25px;
+}
+
+.contact-form-card label {
+    display: block;
+
+    color: #102a22;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    margin-bottom: 7px;
+}
+
+.contact-form-card .form-control {
+    border: 1px solid #ddd;
+
+    padding: 12px 14px;
+
+    border-radius: 4px;
+}
+
+.contact-form-card .form-control:focus {
+    border-color: #d6b56c;
+
+    box-shadow:
+        0 0 0 0.15rem rgba(214, 181, 108, 0.2);
+}
+
+.contact-submit {
+    border: none;
+
+    background: #102a22;
+
+    color: white;
+
+    padding: 13px 22px;
+
+    border-radius: 4px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.contact-submit:hover {
+    background: #d6b56c;
+
+    color: #102a22;
+}
+
+
+/* ================= LOGIN / SIGNUP ================= */
+
+.auth-modal {
+    position: relative;
+
+    border: none;
+
+    border-radius: 12px;
+
+    padding: 35px;
+
+    background: white;
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.25);
+
+    overflow: hidden;
+}
+
+.auth-close {
+    position: absolute;
+
+    top: 18px;
+
+    right: 18px;
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #f5f2eb;
+
+    color: #102a22;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 5;
+}
+
+.auth-close:hover {
+    background: #102a22;
+
+    color: white;
+}
+
+.auth-header {
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+.auth-logo {
+    width: 55px;
+
+    height: 55px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background: #102a22;
+
+    color: #d6b56c;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-family: Georgia, serif;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    border: 2px solid #d6b56c;
+}
+
+.auth-header h2 {
+    font-family: Georgia, serif;
+
+    color: #102a22;
+
+    font-size: 30px;
+
+    margin-bottom: 8px;
+}
+
+.auth-header p {
+    color: #777;
+
+    font-size: 13px;
+
+    margin: 0;
+}
+
+.auth-switch {
+    display: flex;
+
+    background: #f5f2eb;
+
+    border-radius: 6px;
+
+    padding: 4px;
+
+    margin-bottom: 25px;
+}
+
+.auth-tab {
+    width: 50%;
+
+    border: none;
+
+    background: transparent;
+
+    color: #777;
+
+    padding: 10px;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.auth-tab.active {
+    background: #102a22;
+
+    color: white;
+}
+
+.auth-input {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    margin-bottom: 15px;
+}
+
+.auth-input > i {
+    position: absolute;
+
+    left: 14px;
+
+    color: #9a9a9a;
+
+    font-size: 16px;
+
+    pointer-events: none;
+}
+
+.auth-input input {
+    width: 100%;
+
+    height: 48px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+
+    outline: none;
+
+    padding: 0 42px;
+
+    font-size: 14px;
+
+    color: #102a22;
+
+    background: white;
+
+    transition: 0.3s;
+}
+
+.auth-input input:focus {
+    border-color: #d6b56c;
+
+    box-shadow:
+        0 0 0 3px rgba(214, 181, 108, 0.12);
+}
+
+.password-toggle {
+    position: absolute;
+
+    right: 12px;
+
+    border: none;
+
+    background: transparent;
+
+    color: #888;
+
+    cursor: pointer;
+
+    font-size: 16px;
+}
+
+.auth-row {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.auth-options {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin: 5px 0 20px;
+
+    font-size: 12px;
+}
+
+.auth-options label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    color: #777;
+}
+
+.auth-options input {
+    accent-color: #102a22;
+}
+
+.auth-options a {
+    color: #9c7b35;
+
+    text-decoration: none;
+}
+
+.auth-options a:hover {
+    text-decoration: underline;
+}
+
+.terms-check {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 8px;
+
+    color: #777;
+
+    font-size: 12px;
+
+    line-height: 1.5;
+
+    margin: 5px 0 18px;
+}
+
+.terms-check input {
+    margin-top: 2px;
+
+    accent-color: #102a22;
+}
+
+.auth-submit {
+    width: 100%;
+
+    border: none;
+
+    background: #102a22;
+
+    color: white;
+
+    height: 48px;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.auth-submit:hover {
+    background: #d6b56c;
+
+    color: #102a22;
+}
+
+.auth-submit i {
+    margin-left: 7px;
+}
+
+.auth-bottom-text {
+    text-align: center;
+
+    color: #777;
+
+    font-size: 13px;
+
+    margin: 20px 0 0;
+}
+
+.auth-bottom-text button {
+    border: none;
+
+    background: transparent;
+
+    color: #a27e36;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    padding: 0;
+}
+
+
+/* ================= ROOM MODAL ================= */
 
 #roomModal .modal-content {
     border: none;
+
     border-radius: 12px;
+
     overflow: hidden;
 }
 
 #roomModal .modal-header {
     background: #102a22;
+
     color: white;
+
     border: none;
 }
 
@@ -606,6 +1542,7 @@ img {
 
 #modalRoomImage {
     width: 100%;
+
     max-height: 350px;
 
     object-fit: cover;
@@ -613,6 +1550,7 @@ img {
 
 #modalRoomTitle {
     font-family: Georgia, serif;
+
     color: #102a22;
 
     margin-bottom: 10px;
@@ -620,11 +1558,13 @@ img {
 
 #modalRoomDescription {
     color: #666;
+
     line-height: 1.6;
 }
 
 .modal-room-info {
     display: flex;
+
     gap: 20px;
 
     flex-wrap: wrap;
@@ -634,6 +1574,7 @@ img {
 
 .modal-room-info span {
     display: flex;
+
     align-items: center;
 
     gap: 6px;
@@ -652,6 +1593,7 @@ img {
 
 .footer {
     background: #102a22;
+
     color: white;
 
     padding: 30px 0;
@@ -661,6 +1603,7 @@ img {
     margin: 0;
 
     color: #ccc;
+
     font-size: 13px;
 }
 
@@ -668,14 +1611,14 @@ img {
     color: #d6b56c !important;
 
     font-family: Georgia, serif;
+
     font-size: 20px !important;
+
     font-style: italic;
 }
 
 
-/* ================================================= */
-/* ================= TABLET ======================== */
-/* ================================================= */
+/* ================= TABLET ================= */
 
 @media (max-width: 991px) {
 
@@ -687,15 +1630,13 @@ img {
         margin-top: 15px;
 
         justify-content: flex-start;
+
         flex-wrap: wrap;
     }
 
     .nav-link {
         margin: 5px 0;
     }
-
-
-    /* HERO */
 
     .hero {
         min-height: 760px;
@@ -711,9 +1652,6 @@ img {
         font-size: 55px;
     }
 
-
-    /* BOOKING */
-
     .booking-box {
         position: relative;
 
@@ -726,16 +1664,15 @@ img {
 
     .booking-item {
         border-right: none;
+
         border-bottom: 1px solid #ddd;
     }
 
     .search-rooms-btn {
         min-height: 55px;
+
         padding: 15px;
     }
-
-
-    /* FEATURES */
 
     .features {
         padding-top: 50px;
@@ -747,9 +1684,6 @@ img {
         margin-bottom: 25px;
     }
 
-
-    /* ROOMS */
-
     .section-heading {
         align-items: flex-start;
     }
@@ -758,12 +1692,26 @@ img {
         font-size: 40px;
     }
 
+    .section-heading-center h2 {
+        font-size: 40px;
+    }
+
+    .about-image img {
+        height: 450px;
+    }
+
+    .about-section h2 {
+        font-size: 38px;
+    }
+
+    .about-experience {
+        right: 15px;
+    }
+
 }
 
 
-/* ================================================= */
-/* ================= MOBILE ======================== */
-/* ================================================= */
+/* ================= MOBILE ================= */
 
 @media (max-width: 767px) {
 
@@ -774,9 +1722,6 @@ img {
     .navbar-buttons {
         width: 100%;
     }
-
-
-    /* HERO */
 
     .hero {
         min-height: 850px;
@@ -790,11 +1735,13 @@ img {
 
     .hero-small-text {
         font-size: 11px;
+
         letter-spacing: 3px;
     }
 
     .hero h1 {
         font-size: 46px;
+
         line-height: 1.05;
     }
 
@@ -803,9 +1750,6 @@ img {
 
         max-width: 100%;
     }
-
-
-    /* BOOKING */
 
     .booking-box {
         grid-template-columns: 1fr;
@@ -824,9 +1768,6 @@ img {
         width: 100%;
     }
 
-
-    /* FEATURES */
-
     .features {
         padding: 50px 0 25px;
     }
@@ -839,10 +1780,10 @@ img {
         margin-bottom: 30px;
     }
 
-
-    /* SECTION */
-
-    .rooms-section {
+    .rooms-section,
+    .offers-section,
+    .about-section,
+    .contact-section {
         padding: 65px 0;
     }
 
@@ -854,14 +1795,15 @@ img {
         font-size: 36px;
     }
 
+    .section-heading-center h2 {
+        font-size: 36px;
+    }
+
     .view-all {
         display: inline-block;
 
         margin-top: 12px;
     }
-
-
-    /* ROOM */
 
     .room-image {
         height: 240px;
@@ -871,24 +1813,46 @@ img {
         align-items: flex-start;
     }
 
+    .offer-card {
+        padding: 28px;
+    }
 
-    /* MODAL */
+    .about-image img {
+        height: 350px;
+    }
+
+    .about-experience {
+        right: 10px;
+
+        bottom: 15px;
+
+        padding: 15px 18px;
+    }
+
+    .about-experience strong {
+        font-size: 28px;
+    }
+
+    .about-section h2 {
+        font-size: 32px;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info,
+    .contact-form-card {
+        padding: 28px;
+    }
 
     #roomModal .modal-dialog {
         margin: 12px;
     }
 
-    #roomModalImage {
+    #modalRoomImage {
         max-height: 250px;
     }
-
-    .modal-room-info {
-        gap: 12px;
-        font-size: 13px;
-    }
-
-
-    /* SEARCH POPUP */
 
     .search-overlay {
         padding: 80px 15px 20px;
@@ -898,26 +1862,30 @@ img {
         padding: 30px 20px;
     }
 
+    .auth-modal {
+        margin: 10px;
+
+        padding: 28px 20px;
+    }
+
 }
 
 
-/* ================================================= */
 /* ================= SMALL MOBILE ================= */
-/* ================================================= */
 
 @media (max-width: 576px) {
 
     .container {
         width: 100%;
+
         padding-left: 15px;
+
         padding-right: 15px;
     }
-
 
     .navbar-brand img {
         width: 120px;
     }
-
 
     .hero {
         min-height: 900px;
@@ -935,46 +1903,88 @@ img {
         padding: 11px 20px;
     }
 
-
     .feature-icon {
         width: 45px;
+
         height: 45px;
+
         min-width: 45px;
 
         font-size: 18px;
     }
 
-
     .section-heading h2 {
         font-size: 33px;
     }
 
+    .section-heading-center h2 {
+        font-size: 31px;
+    }
 
     .room-image {
         height: 225px;
     }
 
-
     .room-content {
         padding: 16px;
     }
-
 
     .room-content h3 {
         font-size: 21px;
     }
 
-
     .room-bottom {
         flex-direction: column;
+
         align-items: stretch;
     }
 
     .book-btn {
         width: 100%;
+
         padding: 11px;
     }
 
+    .about-image img {
+        height: 280px;
+    }
+
+    .about-experience {
+        position: relative;
+
+        right: auto;
+
+        bottom: auto;
+
+        margin-top: -20px;
+
+        margin-left: 15px;
+
+        width: fit-content;
+    }
+
+    .about-section h2 {
+        font-size: 29px;
+    }
+
+    .contact-info,
+    .contact-form-card {
+        padding: 22px;
+    }
+
+    .auth-row {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .auth-options {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 8px;
+    }
 
     #roomModal .modal-body {
         padding: 18px;
@@ -984,22 +1994,20 @@ img {
         max-height: 220px;
     }
 
-
     .footer {
         text-align: center;
     }
 
     .footer .text-md-end {
         text-align: center !important;
+
         margin-top: 12px;
     }
 
 }
 
 
-/* ================================================= */
-/* ================= VERY SMALL ==================== */
-/* ================================================= */
+/* ================= VERY SMALL ================= */
 
 @media (max-width: 380px) {
 
