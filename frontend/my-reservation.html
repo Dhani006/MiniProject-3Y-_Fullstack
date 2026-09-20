@@ -1,652 +1,389 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>My Reservation | GLA Hotel</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" href="my-reservation.css">
-</head>
+    <link rel="stylesheet" href="my-reservation.css" />
+  </head>
 
-<body>
+  <body>
+    <!-- ================= NAVBAR ================= -->
 
-<!-- NAVBAR -->
-
-<nav class="navbar navbar-expand-lg hotel-navbar">
-
-    <div class="container">
-
+    <nav class="navbar navbar-expand-lg navbar-dark hotel-navbar">
+      <div class="container">
         <a class="navbar-brand" href="index.html">
-            <span>GLA</span> HOTEL
+          <img
+            src="assets/logo.webp"
+            alt="GLA Hotel"
+            width="140"
+            height="auto"
+          />
         </a>
 
-        <button class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navbarNav">
-
-            <i class="bi bi-list"></i>
-
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#hotelNav"
+          aria-controls="hotelNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
         </button>
 
+        <div class="collapse navbar-collapse" id="hotelNav">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#home"> Home </a>
+            </li>
 
-        <div class="collapse navbar-collapse" id="navbarNav">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#rooms"> Rooms </a>
+            </li>
 
-            <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#offers"> Offers </a>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">
-                        Home
-                    </a>
-                </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#about"> About </a>
+            </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#rooms">
-                        Rooms
-                    </a>
-                </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contact"> Contact </a>
+            </li>
+          </ul>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#offers">
-                        Offers
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#about">
-                        About
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html#contact">
-                        Contact
-                    </a>
-                </li>
-
-            </ul>
-
-
-            <div class="navbar-buttons">
-
-                <a href="#" class="login-btn">
-                    Login
-                </a>
-
-                <a href="#" class="signup-btn">
-                    Sign Up
-                </a>
-
-            </div>
-
+          <div class="navbar-buttons">
+            <a href="index.html" class="btn login-btn"> Home </a>
+          </div>
         </div>
+      </div>
+    </nav>
 
-    </div>
+    <!-- PAGE HEADER -->
 
-</nav>
-
-
-<!-- PAGE HEADER -->
-
-<section class="page-header">
-
-    <div class="container">
-
+    <section class="page-header">
+      <div class="container">
         <div class="header-content">
+          <span>GLA HOTEL</span>
 
-            <span>GLA HOTEL</span>
+          <h1>My Reservation</h1>
 
-            <h1>My Reservation</h1>
-
-            <p>
-                View and manage your hotel reservation.
-            </p>
-
+          <p>View and manage your hotel reservation.</p>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- RESERVATION -->
 
-</section>
-
-
-<!-- RESERVATION -->
-
-<section class="reservation-section">
-
-    <div class="container">
-
+    <section class="reservation-section">
+      <div class="container">
         <!-- RESERVATION HEADER -->
 
         <div class="reservation-top">
+          <div>
+            <span class="section-label"> YOUR BOOKING </span>
 
-            <div>
+            <h2>Reservation Details</h2>
+          </div>
 
-                <span class="section-label">
-                    YOUR BOOKING
-                </span>
+          <div class="reservation-status">
+            <i class="bi bi-check-circle-fill"></i>
 
-                <h2>
-                    Reservation Details
-                </h2>
-
-            </div>
-
-
-            <div class="reservation-status">
-
-                <i class="bi bi-check-circle-fill"></i>
-
-                <span>
-                    Confirmed
-                </span>
-
-            </div>
-
+            <span> Confirmed </span>
+          </div>
         </div>
-
 
         <!-- RESERVATION ID -->
 
         <div class="reservation-id-card">
+          <div>
+            <span> RESERVATION ID </span>
 
-            <div>
+            <strong id="reservationId"> GLA-000000 </strong>
+          </div>
 
-                <span>
-                    RESERVATION ID
-                </span>
+          <div class="booking-date">
+            <span> BOOKING STATUS </span>
 
-                <strong id="reservationId">
-                    GLA-000000
-                </strong>
-
-            </div>
-
-
-            <div class="booking-date">
-
-                <span>
-                    BOOKING STATUS
-                </span>
-
-                <strong>
-                    Confirmed
-                </strong>
-
-            </div>
-
+            <strong> Confirmed </strong>
+          </div>
         </div>
-
 
         <div class="row g-4 mt-2">
-
-            <!-- MAIN RESERVATION -->
-
-            <div class="col-lg-8">
-
-                <div class="reservation-card">
-
-
-                    <!-- ROOM -->
-
-                    <div class="room-header">
-
-                        <div class="room-icon">
-
-                            <i class="bi bi-building"></i>
-
-                        </div>
-
-
-                        <div>
-
-                            <span>
-                                ROOM
-                            </span>
-
-                            <h3 id="roomName">
-                                Deluxe Room
-                            </h3>
-
-                            <p id="rateName">
-                                Standard Rate
-                            </p>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- DATES -->
-
-                    <div class="booking-grid">
-
-                        <div class="booking-item">
-
-                            <i class="bi bi-calendar-check"></i>
-
-                            <div>
-
-                                <span>
-                                    CHECK-IN
-                                </span>
-
-                                <strong id="checkIn">
-                                    -
-                                </strong>
-
-                                <small>
-                                    From 2:00 PM
-                                </small>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="booking-item">
-
-                            <i class="bi bi-calendar-x"></i>
-
-                            <div>
-
-                                <span>
-                                    CHECK-OUT
-                                </span>
-
-                                <strong id="checkOut">
-                                    -
-                                </strong>
-
-                                <small>
-                                    Until 11:00 AM
-                                </small>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="booking-item">
-
-                            <i class="bi bi-moon-stars"></i>
-
-                            <div>
-
-                                <span>
-                                    STAY
-                                </span>
-
-                                <strong id="nights">
-                                    -
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-
-                        <div class="booking-item">
-
-                            <i class="bi bi-people"></i>
-
-                            <div>
-
-                                <span>
-                                    GUESTS
-                                </span>
-
-                                <strong id="guests">
-                                    -
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- GUEST INFORMATION -->
-
-                    <div class="content-divider"></div>
-
-
-                    <div class="guest-information">
-
-                        <h3>
-                            <i class="bi bi-person"></i>
-                            Guest Information
-                        </h3>
-
-
-                        <div class="guest-grid">
-
-                            <div>
-
-                                <span>
-                                    FULL NAME
-                                </span>
-
-                                <strong id="guestName">
-                                    -
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    EMAIL
-                                </span>
-
-                                <strong id="guestEmail">
-                                    -
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    PHONE
-                                </span>
-
-                                <strong id="guestPhone">
-                                    -
-                                </strong>
-
-                            </div>
-
-
-                            <div>
-
-                                <span>
-                                    LOCATION
-                                </span>
-
-                                <strong id="guestLocation">
-                                    -
-                                </strong>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SPECIAL REQUEST -->
-
-                    <div class="request-section">
-
-                        <h3>
-                            <i class="bi bi-chat-left-text"></i>
-                            Special Request
-                        </h3>
-
-                        <p id="specialRequest">
-                            No special requests.
-                        </p>
-
-                    </div>
-
+          <!-- MAIN RESERVATION -->
+
+          <div class="col-lg-8">
+            <div class="reservation-card">
+              <!-- ROOM -->
+
+              <div class="room-header">
+                <div class="room-icon">
+                  <i class="bi bi-building"></i>
                 </div>
 
+                <div>
+                  <span> ROOM </span>
+
+                  <h3 id="roomName">Deluxe Room</h3>
+
+                  <p id="rateName">Standard Rate</p>
+                </div>
+              </div>
+
+              <!-- DATES -->
+
+              <div class="booking-grid">
+                <div class="booking-item">
+                  <i class="bi bi-calendar-check"></i>
+
+                  <div>
+                    <span> CHECK-IN </span>
+
+                    <strong id="checkIn"> - </strong>
+
+                    <small> From 2:00 PM </small>
+                  </div>
+                </div>
+
+                <div class="booking-item">
+                  <i class="bi bi-calendar-x"></i>
+
+                  <div>
+                    <span> CHECK-OUT </span>
+
+                    <strong id="checkOut"> - </strong>
+
+                    <small> Until 11:00 AM </small>
+                  </div>
+                </div>
+
+                <div class="booking-item">
+                  <i class="bi bi-moon-stars"></i>
+
+                  <div>
+                    <span> STAY </span>
+
+                    <strong id="nights"> - </strong>
+                  </div>
+                </div>
+
+                <div class="booking-item">
+                  <i class="bi bi-people"></i>
+
+                  <div>
+                    <span> GUESTS </span>
+
+                    <strong id="guests"> - </strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- GUEST INFORMATION -->
+
+              <div class="content-divider"></div>
+
+              <div class="guest-information">
+                <h3>
+                  <i class="bi bi-person"></i>
+                  Guest Information
+                </h3>
+
+                <div class="guest-grid">
+                  <div>
+                    <span> FULL NAME </span>
+
+                    <strong id="guestName"> - </strong>
+                  </div>
+
+                  <div>
+                    <span> EMAIL </span>
+
+                    <strong id="guestEmail"> - </strong>
+                  </div>
+
+                  <div>
+                    <span> PHONE </span>
+
+                    <strong id="guestPhone"> - </strong>
+                  </div>
+
+                  <div>
+                    <span> LOCATION </span>
+
+                    <strong id="guestLocation"> - </strong>
+                  </div>
+                </div>
+              </div>
+
+              <!-- SPECIAL REQUEST -->
+
+              <div class="request-section">
+                <h3>
+                  <i class="bi bi-chat-left-text"></i>
+                  Special Request
+                </h3>
+
+                <p id="specialRequest">No special requests.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- PAYMENT -->
+
+          <div class="col-lg-4">
+            <div class="payment-card">
+              <div class="payment-heading">
+                <h3>Payment Summary</h3>
+
+                <i class="bi bi-receipt"></i>
+              </div>
+
+              <div class="price-row">
+                <span> Room / Night </span>
+
+                <strong id="nightlyPrice"> ₹0 </strong>
+              </div>
+
+              <div class="price-row">
+                <span> Nights </span>
+
+                <strong id="numberOfNights"> 0 </strong>
+              </div>
+
+              <div class="price-row">
+                <span> Rooms </span>
+
+                <strong id="numberOfRooms"> 0 </strong>
+              </div>
+
+              <div class="price-divider"></div>
+
+              <div class="total-row">
+                <span> Total </span>
+
+                <strong id="totalPrice"> ₹0 </strong>
+              </div>
+
+              <div class="payment-status">
+                <i class="bi bi-shield-check"></i>
+
+                <div>
+                  <strong> Reservation Confirmed </strong>
+
+                  <p>Your reservation has been successfully recorded.</p>
+                </div>
+              </div>
             </div>
 
+            <!-- HELP -->
 
-            <!-- PAYMENT -->
+            <div class="help-card">
+              <i class="bi bi-headset"></i>
 
-            <div class="col-lg-4">
+              <div>
+                <h4>Need Help?</h4>
 
-                <div class="payment-card">
+                <p>
+                  Contact our support team if you have any questions about your
+                  reservation.
+                </p>
 
-                    <div class="payment-heading">
-
-                        <h3>
-                            Payment Summary
-                        </h3>
-
-                        <i class="bi bi-receipt"></i>
-
-                    </div>
-
-
-                    <div class="price-row">
-
-                        <span>
-                            Room / Night
-                        </span>
-
-                        <strong id="nightlyPrice">
-                            ₹0
-                        </strong>
-
-                    </div>
-
-
-                    <div class="price-row">
-
-                        <span>
-                            Nights
-                        </span>
-
-                        <strong id="numberOfNights">
-                            0
-                        </strong>
-
-                    </div>
-
-
-                    <div class="price-row">
-
-                        <span>
-                            Rooms
-                        </span>
-
-                        <strong id="numberOfRooms">
-                            0
-                        </strong>
-
-                    </div>
-
-
-                    <div class="price-divider"></div>
-
-
-                    <div class="total-row">
-
-                        <span>
-                            Total
-                        </span>
-
-                        <strong id="totalPrice">
-                            ₹0
-                        </strong>
-
-                    </div>
-
-
-                    <div class="payment-status">
-
-                        <i class="bi bi-shield-check"></i>
-
-                        <div>
-
-                            <strong>
-                                Reservation Confirmed
-                            </strong>
-
-                            <p>
-                                Your reservation has been successfully
-                                recorded.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-
-                <!-- HELP -->
-
-                <div class="help-card">
-
-                    <i class="bi bi-headset"></i>
-
-                    <div>
-
-                        <h4>
-                            Need Help?
-                        </h4>
-
-                        <p>
-                            Contact our support team if you have any
-                            questions about your reservation.
-                        </p>
-
-                        <a href="index.html#contact">
-                            Contact Hotel
-                            <i class="bi bi-arrow-right"></i>
-                        </a>
-
-                    </div>
-
-                </div>
-
+                <a href="index.html#contact">
+                  Contact Hotel
+                  <i class="bi bi-arrow-right"></i>
+                </a>
+              </div>
             </div>
-
+          </div>
         </div>
-
 
         <!-- ACTIONS -->
 
         <div class="reservation-actions">
+          <a href="index.html" class="primary-btn">
+            <i class="bi bi-house"></i>
 
-            <a href="index.html"
-               class="primary-btn">
+            Back to Home
+          </a>
 
-                <i class="bi bi-house"></i>
+          <button
+            type="button"
+            class="secondary-btn"
+            onclick="printReservation()"
+          >
+            <i class="bi bi-printer"></i>
 
-                Back to Home
-
-            </a>
-
-
-            <button
-                type="button"
-                class="secondary-btn"
-                onclick="printReservation()">
-
-                <i class="bi bi-printer"></i>
-
-                Print Reservation
-
-            </button>
-
+            Print Reservation
+          </button>
         </div>
+      </div>
+    </section>
 
-    </div>
+    <!-- FOOTER -->
 
-</section>
-
-
-<!-- FOOTER -->
-
-<footer class="footer">
-
-    <div class="container">
-
+    <footer class="footer">
+      <div class="container">
         <div class="footer-content">
-
-            <div>
-
-                <h3>
-                    GLA HOTEL
-                </h3>
-
-                <p>
-                    Experience comfort, luxury and unforgettable
-                    hospitality with us.
-                </p>
-
-            </div>
-
-
-            <div>
-
-                <h4>
-                    Quick Links
-                </h4>
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a href="index.html#rooms">
-                    Rooms
-                </a>
-
-                <a href="index.html#offers">
-                    Offers
-                </a>
-
-                <a href="index.html#about">
-                    About
-                </a>
-
-                <a href="index.html#contact">
-                    Contact
-                </a>
-
-            </div>
-
-
-            <div>
-
-                <h4>
-                    Contact
-                </h4>
-
-                <p>
-                    <i class="bi bi-telephone"></i>
-                    +91 98765 43210
-                </p>
-
-                <p>
-                    <i class="bi bi-envelope"></i>
-                    info@glahotel.com
-                </p>
-
-            </div>
-
-        </div>
-
-
-        <div class="footer-bottom">
+          <div>
+            <h3>GLA HOTEL</h3>
 
             <p>
-                © 2026 GLA Hotel. All Rights Reserved.
+              Experience comfort, luxury and unforgettable hospitality with us.
+            </p>
+          </div>
+
+          <div>
+            <h4>Quick Links</h4>
+
+            <a href="index.html"> Home </a>
+
+            <a href="index.html#rooms"> Rooms </a>
+
+            <a href="index.html#offers"> Offers </a>
+
+            <a href="index.html#about"> About </a>
+
+            <a href="index.html#contact"> Contact </a>
+          </div>
+
+          <div>
+            <h4>Contact</h4>
+
+            <p>
+              <i class="bi bi-telephone"></i>
+              +91 98765 43210
             </p>
 
+            <p>
+              <i class="bi bi-envelope"></i>
+              info@glahotel.com
+            </p>
+          </div>
         </div>
 
-    </div>
+        <div class="footer-bottom">
+          <p>© 2026 GLA Hotel. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
 
-</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-<script src="my-reservation.js"></script>
-
-</body>
+    <script src="my-reservation.js"></script>
+  </body>
 </html>
