@@ -28,6 +28,16 @@
 
 <body>
 
+<!-- ================= PAGE LOADER ================= -->
+<div class="page-loader" id="pageLoader" aria-label="Loading GLA Hotel" role="status">
+    <div class="page-loader-inner">
+        <img src="assets/logo.webp" alt="GLA Hotel" class="loader-logo">
+        <div class="loader-spinner" aria-hidden="true"></div>
+        <p>Preparing your stay...</p>
+    </div>
+</div>
+
+
 
 <!-- ================= NAVBAR ================= -->
 
@@ -531,12 +541,11 @@
                     onclick="showRoomDetails('Deluxe Room')"
                 >
 
-                    <div class="room-image">
+                    <div class="room-image lightbox-trigger">
 
                         <img
                             src="assets/room-deluxe.webp"
-                            alt="Deluxe Room"
-                        >
+                            alt="Deluxe Room" loading="lazy" decoding="async">
 
 
                         <span class="room-badge">
@@ -611,12 +620,11 @@
                     onclick="showRoomDetails('Executive Suite')"
                 >
 
-                    <div class="room-image">
+                    <div class="room-image lightbox-trigger">
 
                         <img
                             src="assets/room-suite.webp"
-                            alt="Executive Suite"
-                        >
+                            alt="Executive Suite" loading="lazy" decoding="async">
 
                     </div>
 
@@ -686,12 +694,11 @@
                     onclick="showRoomDetails('Premium Sea View')"
                 >
 
-                    <div class="room-image">
+                    <div class="room-image lightbox-trigger">
 
                         <img
                             src="assets/room-seaview.webp"
-                            alt="Premium Sea View"
-                        >
+                            alt="Premium Sea View" loading="lazy" decoding="async">
 
 
                         <span class="room-badge">
@@ -766,12 +773,11 @@
                     onclick="showRoomDetails('Private Pool Villa')"
                 >
 
-                    <div class="room-image">
+                    <div class="room-image lightbox-trigger">
 
                         <img
                             src="assets/room-villa.webp"
-                            alt="Private Pool Villa"
-                        >
+                            alt="Private Pool Villa" loading="lazy" decoding="async">
 
 
                         <span class="room-badge">
@@ -1044,8 +1050,7 @@
 
                     <img
                         src="assets/about-hotel.webp"
-                        alt="GLA Hotel"
-                    >
+                        alt="GLA Hotel" loading="lazy" decoding="async">
 
                     <div class="about-experience">
 
@@ -1802,6 +1807,32 @@
 
 </div>
 
+
+
+<!-- ================= IMAGE LIGHTBOX ================= -->
+<div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+    <button class="lightbox-close" type="button" onclick="closeLightbox()" aria-label="Close image viewer">
+        <i class="bi bi-x-lg"></i>
+    </button>
+
+    <button class="lightbox-prev" type="button" onclick="changeLightboxImage(-1)" aria-label="Previous image">
+        <i class="bi bi-chevron-left"></i>
+    </button>
+
+    <div class="lightbox-content">
+        <img id="lightboxImage" src="" alt="Room preview">
+        <p id="lightboxCaption"></p>
+    </div>
+
+    <button class="lightbox-next" type="button" onclick="changeLightboxImage(1)" aria-label="Next image">
+        <i class="bi bi-chevron-right"></i>
+    </button>
+</div>
+
+<!-- ================= BACK TO TOP ================= -->
+<button class="back-to-top" id="backToTop" type="button" onclick="scrollToTop()" aria-label="Back to top">
+    <i class="bi bi-arrow-up"></i>
+</button>
 
 <!-- ================= FOOTER ================= -->
 
